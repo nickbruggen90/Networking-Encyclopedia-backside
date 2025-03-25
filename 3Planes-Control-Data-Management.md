@@ -1,3 +1,5 @@
+# 3 Planes - Control, Data, Management
+
 ### Overview
 * Each plane can be protected with separate policies (i.e., CoPP or Management Plane Protection)  
 * In many SDN environments the the control plane is centralized on a controller  
