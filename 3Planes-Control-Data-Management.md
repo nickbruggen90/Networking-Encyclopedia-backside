@@ -1,4 +1,4 @@
->* Each plane can be protected with separate policies (i.e., CoPP or Management Plane Protection)  
+* Each plane can be protected with separate policies (i.e., CoPP or Management Plane Protection)  
 * In many SDN environments the the control plane is centralized on a controller  
 * Is a routing protocol down? Control Plane  
 * Is a device unreachable on SSH? Management Plane
