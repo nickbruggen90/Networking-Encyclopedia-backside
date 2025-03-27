@@ -107,16 +107,16 @@
 > * OSPFv3 (IPv6) – Auth is handled by IPsec layer rather than with OSPF itself
 ---
 ### Header Breakdown & Definitions:
-| Version | Type | Packet Length | RID | Area ID | Checksum | AuType | Authentication |
-OSPF Common Header = 1 - Version (2 for IPv4, 3 for IPv6)
-			        1 - Type (1 = Hello, 2 = DBD, 3 = LSR, 4 = LSU, 5 = LSAck)
-			        2 - Packet Length (header + payload length)
-			        4 - RID (unique ID of router sending packet)
-			        4 - Area ID (area ID which packet belongs; 0.0.0.0 for Area 0)
-			        2 - Checksum
-			        2 - AuType (0 = no auth, 1 = plain-text, 2 = MD5 or cryptographic)
-			        8 - Authentication (password, MD5 or zeroed)
-					*OSPFv3 for IPv6 auth is handled differently*
+> * | Version | Type | Packet Length | RID | Area ID | Checksum | AuType | Authentication |
+> * OSPF Common Header = 1 - Version (2 for IPv4, 3 for IPv6)
+>   * 1 - Type (1 = Hello, 2 = DBD, 3 = LSR, 4 = LSU, 5 = LSAck)
+>   * 2 - Packet Length (header + payload length)
+>   * 4 - RID (unique ID of router sending packet)
+>   * 4 - Area ID (area ID which packet belongs; 0.0.0.0 for Area 0)
+>   * 2 - Checksum
+>   * 2 - AuType (0 = no auth, 1 = plain-text, 2 = MD5 or cryptographic)
+>   * 8 - Authentication (password, MD5 or zeroed)
+*OSPFv3 for IPv6 auth is handled differently*
 
 
 
