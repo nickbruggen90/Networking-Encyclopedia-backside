@@ -39,3 +39,15 @@ Nexus (Data Centers) – Management – NX-OS shell, API interfaces (NX-API, RES
 > * DHCP Snooping and DAI protect the Control Plane
 > * Control Plane Technologies → CPU, specialized handling, CoPP, TCAM interaction
 
+
+#### *Data Plane (aka Forwarding Plane)* is responsible for actual packet/frame forwarding and switching, including filtering, by moving user data from ingress to egress based on the FIB lookups.
+> * Executes predetermined rules configured by Control Plane  
+> * Is how traffic from end-hosts (or transit data) gets forwarded across the network. Forwards traffic built by the Control Plane.  
+> * Processed by ASICs on line cards (or sometimes NPUs) at lines speeds  
+> * ASICs allow for high throughput with minimal CPU involvement (10+ gigs or more).  
+> * Performs packet lookup against routing tables, applies ACL’s, QoS policies, MPLS, GRE, NAT translation, IPsec, VLAN tagging/removal and the final “push bits out the interface” logic.  
+> * Handles encapsulation/decapsulation of tunneling protocols (GRE, IPsec, VXLAN)  
+> * Packets that requires inspection or are unrecognized are punted to the CPU (Control Plane)  
+> * Data Plane Technologies → ASICs, TCAM, CEF  
+
+
