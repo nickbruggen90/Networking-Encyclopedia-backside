@@ -117,3 +117,24 @@ Management → Data = Management Plane can indirectly influence Data Plane by ap
 > * Apply ACLs, IPsec and other security mechanisms at the data plane level to filter traffic and prevent unauthorized access  
 > * Continuously monitor data plane metrics (throughput, latency, error rates) to ensure optimal performance  
 ---
+### Troubleshooting:
+> * Inspect physical interfaces and cables if packet loss or errors are observed
+> * Check for hardware resource limitations (CAM table exhaustion, etc) that may affect data plan performance
+*Management Plane –*
+
+> * If you’re unable to connect via SSH or SNMP, verify ACLs, authentication settings and network connectivity
+> * Check management logs for any authentication or authorization errors
+> * Use tools like NETCONF/RESTCONF or centralized controllers to compare running configurations across devices
+> * Ensure management systems are updated and synchronized
+
+*Control Plane –*
+> * Use commands like show ip route, show ip ospf neighbor or show ip bgp to verify routing table accuracy and neighbor relationships
+> * Investigate any authentication mismatches or protocol configuration errors that may be causing route flaps or lost adjacencies
+> * Enable debugging for routing protocols to trace issues in real time, but use caution in production
+
+*Data Plane –*
+> * Verify interface statuses and error counters using show interfaces commands
+> * Check MAC address tables and ACLs to ensure traffic is being forwarded correctly
+> * Use commands like show queueing or show policy-map interface to examine QoS statistics
+> * Identify if packet drops or high latency are linked to misconfigured or overloading queues
+---
