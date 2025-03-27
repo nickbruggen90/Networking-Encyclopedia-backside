@@ -75,3 +75,13 @@ Control → Data = Control Plane programs the Data Plane with forwarding rules
 Management → Control = Management Plane configures and monitors Control Plane protocols  
 Management → Data = Management Plane can indirectly influence Data Plane by applying ACLs/QoS Policy  
 ```
+---
+### Special Packet Scenarios:
+>* 1. Packets destined for same device:  
+* Where SRC/DST IP belong to the same device  
+* Loopback traffic (handled by software stack)  
+* Self-originating packets  
+> * 2.Expired TTL:  
+* When the TTL expires; an “ICMP Time Exceeded” message is sent back to the packets source  
+> * 3.Optional Headers: provides features/functions beyond basic packet forwarding  
+* Common Headers - RR (record route; captures IPs along path), timestamp, SSR (strict source routing; specifies exact route packet must follow), LSR (loose source routing; specifies intermediate routes)  
