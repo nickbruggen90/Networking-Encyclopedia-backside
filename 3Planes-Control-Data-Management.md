@@ -27,11 +27,11 @@ Nexus (Data Centers) – Management – NX-OS shell, API interfaces (NX-API, RES
 
 #### Control Plane is responsible for building and maintaining network topology and decision making based on routing logic (builds and maintains routing and switching tables)
 ```
-Is how devices talk to each other and build topology and routing knowledge. Makes decisions for traffic handling.
-Maintains RIB and Adjacency Tables. Maintains and updates routing, MAC and ARP tables.
-Typically runs in software on the Route Processor (RP) or Supervisor CPU
-Packets that requires inspection or are unrecognized are punted to the CPU (Control Plane)
-CoPP and CPPr are Cisco features that rate-limits or drops, as well as protocol filtering Control Plane traffic beyond certain thresholds
-Runs routing protocols (OSPF, EIGRP, BGP); including OSPF Hello packets and BGP updates
-Runs switching protocols (STP, VTP, DTP) including BPDU-based features (BPDUGuard/BPDU Filter); switches learn MAC addresses
+* Is how devices talk to each other and build topology and routing knowledge. Makes decisions for traffic handling.  
+* Maintains RIB and Adjacency Tables. Maintains and updates routing, MAC and ARP tables.  
+* Typically runs in software on the Route Processor (RP) or Supervisor CPU  
+* Packets that requires inspection or are unrecognized are punted to the CPU (Control Plane)  
+* CoPP and CPPr are Cisco features that rate-limits or drops, as well as protocol filtering Control Plane traffic beyond certain thresholds  
+* Runs routing protocols (OSPF, EIGRP, BGP); including OSPF Hello packets and BGP updates  
+* Runs switching protocols (STP, VTP, DTP) including BPDU-based features (BPDUGuard/BPDU Filter); switches learn MAC addresses  
 ```
