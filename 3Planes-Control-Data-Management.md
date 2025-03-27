@@ -86,3 +86,9 @@ Management → Data = Management Plane can indirectly influence Data Plane by ap
 * 3. Optional Headers: provides features/functions beyond basic packet forwarding  
 > * Common Headers - RR (record route; captures IPs along path), timestamp, SSR (strict source routing; specifies exact route packet must follow), LSR (loose source routing; specifies intermediate routes)  
 ---
+### Use Cases:
+> * Enterprise Networks – separate management traffic (from controllers and management stations) from control traffic (routing protocols) and data traffic (user applications) to enhance performance and security
+> * Data Centers – use dedicated control plane mechanisms to manage high-volume routing and dynamic workloads, while ensuring that management and data traffic are isolated
+> * Service Providers – maintain strict separation of customer data (data plane) from control signaling (control plane) and administrative access (management plane) to provide secure, scalable services
+> * SDN/SD-Access Deployments – leverage the three-plane model to integrate centralized policy management, dynamic routing and efficient data forwarding in a SDN
+---
