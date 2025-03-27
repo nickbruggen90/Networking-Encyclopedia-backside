@@ -123,7 +123,7 @@
 
 
 
-##### OSPF Hello Packet (Type 1) = 4 - Network Mask (subnet mask of sending interface)
+##### OSPF Hello Packet (Type 1) = 
 Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networks and ensure two-way communication; maintains adjacencies
 > * | Common Header | Network Mask | Hello Int | Options | Router Prio. | Dead Int | DR | BDR | Neighbor ID |
 > * 4 - Network Mask (subnet mask of sending interface)
