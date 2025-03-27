@@ -70,3 +70,8 @@ Egress: packet it placed in the correct interface queue and sent out
 > * Use out-of-band management if possible  
 > * Not directly involved in CEF  
 
+```
+Control → Data = Control Plane programs the Data Plane with forwarding rules  
+Management → Control = Management Plane configures and monitors Control Plane protocols  
+Management → Data = Management Plane can indirectly influence Data Plane by applying ACLs/QoS Policy  
+```
