@@ -94,20 +94,23 @@ Management → Data = Management Plane can indirectly influence Data Plane by ap
 ---
 ### Best Practices:
 > * Avoid relying on IP Headers in production environments  
-> * Configure firewalls to block risky options  
+> * Configure firewalls to block risky options
+
 *Management Plane –*  
 > * Limit access to management interfaces using strong authentication (SSH, HTTPS with certificates) and RBAC  
 > * Use management VLANs to separate OOB management networks to isolate management traffic from regular data  
 > * Ensure that management traffic is encrypted to prevent eavesdropping (using SNMPv3 and TLS/SSH for CLI access)  
 > * Continuously monitor management logs and audit changes  
 > * Implement centralized management systems to track device configuration and performance  
-> * Regularly update device firmware and management software to protect against known vulnerabilities  
+> * Regularly update device firmware and management software to protect against known vulnerabilities
+
 *Control Plane –*  
 > * Secure routing protocols to prevent route injection or manipulation  
 > * Use secure configurations (MD5 or SHA authentication) on routing adjacencies  
 > * Isolate the control plane from the data plane using separate physical or logical interfaces where possible  
 > * Deploy redundant control plan mechanisms (multiple routing protocols, route reflectors, etc) to ensure continuous network operation  
-> * Monitor routing updates and control plane performance to detect anomalies such as route flapping or unauthorized route changes  
+> * Monitor routing updates and control plane performance to detect anomalies such as route flapping or unauthorized route changes
+
 *Data Plane –*  
 > * Utilize dedicated hardware (ASICs) for fast, efficient packet forwarding  
 > * Implement QoS policies to prioritize critical traffic and manage congestion  
