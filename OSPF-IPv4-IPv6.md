@@ -119,7 +119,7 @@
 >   * 8 - Authentication (password, MD5 or zeroed)  
 *OSPFv3 for IPv6 auth is handled differently*  
 
-OSPF Common Header Definitions:
+### OSPF Common Header Definitions:
 ---
 
 
