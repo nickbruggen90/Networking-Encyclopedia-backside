@@ -85,3 +85,4 @@ Management → Data = Management Plane can indirectly influence Data Plane by ap
 > * When the TTL expires; an “ICMP Time Exceeded” message is sent back to the packets source  
 * 3. Optional Headers: provides features/functions beyond basic packet forwarding  
 > * Common Headers - RR (record route; captures IPs along path), timestamp, SSR (strict source routing; specifies exact route packet must follow), LSR (loose source routing; specifies intermediate routes)  
+---
