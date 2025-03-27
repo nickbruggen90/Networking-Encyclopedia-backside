@@ -86,8 +86,8 @@
 > * Intra-Area Routes – routes within the same area; uses SPF algorithm
 > * Inter-Area Routes – routes between different areas, advertised as summary LSAs
 > * External Routes – routes from outside the OSPF AS
-> * Type 1 External (E1) – sum of the internal cost to the ASBR plus the external cost
-> * Type 2 External (E2) – cost is based solely on external metrics (default in most cases)
-> * NSSA External Type 1 (N1) –
-> * NSSA External Type 2 (N2) –
+> > * Type 1 External (E1) – sum of the internal cost to the ASBR plus the external cost
+> > * Type 2 External (E2) – cost is based solely on external metrics (default in most cases)
+> > * NSSA External Type 1 (N1) –
+> > * NSSA External Type 2 (N2) –
 ---
