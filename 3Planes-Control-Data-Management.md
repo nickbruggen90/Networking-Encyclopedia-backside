@@ -42,12 +42,31 @@ Nexus (Data Centers) – Management – NX-OS shell, API interfaces (NX-API, RES
 
 #### *Data Plane (aka Forwarding Plane)* is responsible for actual packet/frame forwarding and switching, including filtering, by moving user data from ingress to egress based on the FIB lookups.
 > * Executes predetermined rules configured by Control Plane  
-> * Is how traffic from end-hosts (or transit data) gets forwarded across the network. Forwards traffic built by the Control Plane.  
+> * Is how traffic from end-hosts (or transit data) gets forwarded across the network. Forwards traffic built by the Control Plane  
 > * Processed by ASICs on line cards (or sometimes NPUs) at lines speeds  
-> * ASICs allow for high throughput with minimal CPU involvement (10+ gigs or more).  
-> * Performs packet lookup against routing tables, applies ACL’s, QoS policies, MPLS, GRE, NAT translation, IPsec, VLAN tagging/removal and the final “push bits out the interface” logic.  
+> * ASICs allow for high throughput with minimal CPU involvement (10+ gigs or more)  
+> * Performs packet lookup against routing tables, applies ACL’s, QoS policies, MPLS, GRE, NAT translation, IPsec, VLAN tagging/removal and the final “push bits out the interface” logic  
 > * Handles encapsulation/decapsulation of tunneling protocols (GRE, IPsec, VXLAN)  
 > * Packets that requires inspection or are unrecognized are punted to the CPU (Control Plane)  
 > * Data Plane Technologies → ASICs, TCAM, CEF  
 
+```
+Data Plane Traffic Flow:
+Ingress → Policy Enforcement → Lookup → Egress
+Ingress: devices checks FIB and Adjacency Tables to find next-hop
+Policy Enforcement: ACL and/or QoS rule is applied (permit, deny, mark, etc)
+Lookup: next-hop MAC or outgoing interface is determined in hardware
+Egress: packet it placed in the correct interface queue and sent out
+```
+
+#### *Management Plane* is responsible for device management and administrative access.
+> * The Management Plane is how humans talk to and configure devices. Used to configure, manage and monitor the network  
+> * Relies on CPU for  configuration changes  
+> * Includes protocols and services such as SSH, TelNet, SNMP, NetFlow, NETCONF/RESTCONF, HTTP/HTTPS, API interfaces (Cisco DNA or SDN controllers), REST APIs, local console/VTY, SysLog, gNMI/gRPC  
+> * Relies on TFTP/FTP for transfer of IOS images, device reboots and backups  
+> * Ties into AAA servers (TACACS+, RADIUS) for admin logins; use RBAC when possible  
+> * Restrict access to only trusted hosts/subnets; often placed in a dedicated management VLAN  
+> * Features like CPPr can also apply to management traffic  
+> * Use out-of-band management if possible  
+> * Not directly involved in CEF  
 
