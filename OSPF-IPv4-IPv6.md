@@ -108,7 +108,7 @@
 ---
 ### Header Breakdown & Definitions:
 > * | Version | Type | Packet Length | RID | Area ID | Checksum | AuType | Authentication |  
-##### > * OSPF Common Header =  
+##### OSPF Common Header =  
 >   * 1 - Version (2 for IPv4, 3 for IPv6)  
 >   * 1 - Type (1 = Hello, 2 = DBD, 3 = LSR, 4 = LSU, 5 = LSAck)  
 >   * 2 - Packet Length (header + payload length)  
