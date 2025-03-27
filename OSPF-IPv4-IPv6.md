@@ -12,3 +12,17 @@
 > * LSA Refresh Timer = 1800 sec (30 min) || LSA Retransmission Timer = 5 sec  
 > * LSA MaxAge Timer = 3600 sec (60 min)  
 ---
+### Multicast:
+> * IPv4 Multicast (OSPFv2)
+> * All OSPF Routers: 224.0.0.5
+> * DR/BDR Routers: 224.0.0.6
+> * IPv6 Multicast (OSPFv3)
+> * All OSPF Routers: FF02::5
+> * All DR/BDR Routers: FF02::6
+---
+### Protocol/Port:
+> * IP: 89
+---
+### Priorities:
+> * Administrative Distance: 110
+---
