@@ -25,7 +25,7 @@ Nexus (Data Centers) – Management – NX-OS shell, API interfaces (NX-API, RES
 		       Data Plane – ASICs switching at line-rate. Micro-segmentation and 			                                  VXLAN encapsulation in hardware
 ```
 
-#### <u>Control</u> Plane is responsible for building and maintaining network topology and decision making based on routing logic (builds and maintains routing and switching tables)
+#### *Control Plane* is responsible for building and maintaining network topology and decision making based on routing logic (builds and maintains routing and switching tables)
 > * Is how devices talk to each other and build topology and routing knowledge. Makes decisions for traffic handling.  
 > * Maintains RIB and Adjacency Tables. Maintains and updates routing, MAC and ARP tables.  
 > * Typically runs in software on the Route Processor (RP) or Supervisor CPU  
