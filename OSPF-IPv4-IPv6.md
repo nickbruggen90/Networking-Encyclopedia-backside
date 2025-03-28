@@ -147,7 +147,8 @@ Purpse: DBD packets provide a high-level summary of each LSA so neighbors can ch
 > * | Common Header | Interface MTU | Options | DBD | DD Sequence Number | LSA Headers |
 >   * 2 - Interface MTU
 >   * 1 - Options (same optional capability bits as in Hello)
->   * 1 - DBD *flags* I (initial) - set if this is the first DBD in a series
+>   * 1 - DBD *flags*
+>     * I (initial) - set if this is the first DBD in a series
 >     * M (more) - more DBD packets to follow
 >     * MS (master/slave) - indicates M/S			 
 >   * 4 - DD Sequence Number
