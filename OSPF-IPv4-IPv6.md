@@ -105,7 +105,7 @@
 > * Null Auth – no auth; default
 > * Simple Password – a plain-text password
 > * MD5 Auth – provides integrity and authenticity
-> * OSPFv3 (IPv6) – Auth is handled by IPsec layer rather than with OSPF itself
+> * OSPFv3 (IPv6) – auth is handled by IPsec layer rather than with OSPF itself
 ---
 ### Header Breakdown & Definitions:
 #### OSPF Common Header =  
