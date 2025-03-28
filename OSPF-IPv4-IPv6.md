@@ -107,7 +107,7 @@
 > * OSPFv3 (IPv6) – Auth is handled by IPsec layer rather than with OSPF itself
 ---
 ### Header Breakdown & Definitions:
-##### OSPF Common Header =  
+#### OSPF Common Header =  
 > * | Version | Type | Packet Length | RID | Area ID | Checksum | AuType | Authentication |
 >   * 1 - Version (2 for IPv4, 3 for IPv6)  
 >   * 1 - Type (1 = Hello, 2 = DBD, 3 = LSR, 4 = LSU, 5 = LSAck)  
@@ -122,8 +122,7 @@
 ##### OSPF Common Header Definitions:
 
 
-
-##### OSPF Hello Packet (Type 1) = 
+#### OSPF Hello Packet (Type 1) = 
 Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networks and ensure two-way communication; maintains adjacencies
 > * | Common Header | Network Mask | Hello Int | Options | Router Prio. | Dead Int | DR | BDR | Neighbor ID |
 >   * 4 - Network Mask (subnet mask of sending interface)
@@ -136,13 +135,13 @@ Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networ
 >   * 4 - DR (IP of current DR on segment; 0.0.0.0 if none)
 >   * 4 - BDR (IP of current DBR; 0.0.0.0 if none)
 >   * variable - Neighbor IDs
+
 ##### OSPF Hello Packet (Type 1) Header Definitions:
 > * Neighbor IDs – list of RIDs from which Hellos have been seen on this interface within the Dead interval
 
 
-
 ##### OSPF DBD Packet (Type 2) = 
-Purpose: DBD packets provide a high-level summary of each LSA so neighbors can check what they have or are missing. Summaries of LSDB content to compare databases.
+Purpse: DBD packets provide a high-level summary of each LSA so neighbors can check what they have or are missing. Summaries of LSDB content to compare databases.
 > * | Common Header | Interface MTU | Options | DBD | DD Sequence Number | LSA Headers |
 >   * 2 - Interface MTU
 >   * 1 - Options (same optional capability bits as in Hello)
