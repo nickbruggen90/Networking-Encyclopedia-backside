@@ -34,3 +34,30 @@
 > * Peer (symmetric) – two NTP-enabled devices (peers) can both supply time to each other
 > * Broadcast/Multicast – one device broadcasts time updates; listeners receive passively
 >   * Client/Server model uses unicast
+---
+### Use Cases:
+> * Logging/Timestamp – Syslog, SNMP traps, debug logs
+> * Certificates – PKI, SSL
+> * Authentication – Kerberos, 802.1X
+---
+### Best Practices:
+> * Configure at least two servers for redundancy
+> * Use authentication
+> * Keep a good hierarchy. Avoid multiple devices referencing each other in a loop
+> * Only use NTP Master if there is no external time source available
+> * Make sure UDP 123 is open and NTP server is reachable; check ACLs blocking UDP 123
+---
+### Troubleshooting:
+> *
+---
+### Insights:
+> * On Linux/Unix NTP daemons, you can adjust the minpoll/maxpoll settings in ntp.conf
+> * NTP maintains an 8-bit “reach” register showing the success/failure of recent polls
+> * Each poll’s response is used to calculate offset (difference between local clock and server) and round-trip delay. Over time, NTP uses these measurements to adjust the local clock more finely
+> * Dispersion or “jitter” values track how consistent the time source has been. Large dispersion can cause the client to switch to another server.
+> * The first time a device boots, or if the clock is far off, it can take a few polls before it is considered synchronized. You may see “unsynced” or “stratum unknown” initially
+> * If the server is stratum 1 but the device sees it as a stratum 16 (unsynced), then it’s possible the server is not truly synced to the reference clock
+---
+### Commands:
+> *
+---
