@@ -140,7 +140,7 @@ Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networ
 > * Neighbor IDs – list of RIDs from which Hellos have been seen on this interface within the Dead interval
 
 
-##### OSPF DBD Packet (Type 2) = 
+#### OSPF DBD Packet (Type 2) = 
 Purpse: DBD packets provide a high-level summary of each LSA so neighbors can check what they have or are missing. Summaries of LSDB content to compare databases.
 > * | Common Header | Interface MTU | Options | DBD | DD Sequence Number | LSA Headers |
 >   * 2 - Interface MTU
