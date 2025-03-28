@@ -57,7 +57,7 @@ BGP - RFC 4271 (defines BGP-4), RFC 4456 (route reflectors), RFC 4364 (BGP/MPLS 
 > * Active – ???
 > * OpenSent – exchange of open messages and waiting for keepalives
 > * OpenConfirm – ???
-> * Established – routing information (NLRI) can be exchanged
+> * Established – routing information (NLRI) can be exchanged  
 *Neighbors must be manually configured (BGP does not dynamically discover peers)*  
 *AS numbers must match the expected relationship (iBGP vs eBGP)*  
 *Peers must be able to reach each other over TCP 179*
