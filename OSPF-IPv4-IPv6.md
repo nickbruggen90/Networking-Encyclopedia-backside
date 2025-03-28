@@ -227,3 +227,7 @@ OSPF LSAck Packet (Type 5) Definitions:
 > * Stub, totally stubby and NSSA provide route-filtering strategies
 > * Neighbors must be in the same area to form adjacency
 ---
+
+### Commands:
+> *
+---
