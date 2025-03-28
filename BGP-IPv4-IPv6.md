@@ -63,4 +63,55 @@ Requirements:
 *AS numbers must match the expected relationship (iBGP vs eBGP)*  
 *Peers must be able to reach each other over TCP 179*
 ---
-
+### Best Practices/Security Considerations:
+> * Use consistent BGP configuration across all routers (proper use of AS numbers, neighbor statements and rout policies)
+> * Ensure that route reflectors and confederations are configured consistency in larger networks
+> * Implement prefix list, route maps and distribute lists to filter routes exchanged with neighbors
+> * Filter both inbound and outbound updates to prevent propagation of invalid or suboptimal routes
+> * Use attributes like Local Preference and MED appropriately to influence path selection
+> * Ensure consistent application of attributes across your network to enforce desired routing policies
+> * Deploy multiple BGP sessions with backup or alternative paths to ensure HA
+> * Consider BGP multipath configuration to load-balance traffic across equal-cost paths
+> * Configure BGP Graceful Restart to minimize disruptions during a router reload
+> * Enable Route Refresh capability for dynamic re-advertisement of routes without resetting BGP sessions
+> * Enabled detailed logging and SNMP traps for BGP events (sessions flaps, route changes) for proactive monitoring
+> * Maintain thorough documentation of BGP configurations, policies and network design
+> * Use change management procedures when modifying BGP settings to avoid unintended disruptions
+> * Use BGP MD5 authentication on all BGP sessions to prevent unauthorized sessions establishment; and consider more robust security mechanisms (TCP-AO if supported) as MD5 can be vulnerable to certain attacks
+> * Apply strict inbound and outbound filtering to prevent route hijacking or injection of malicious routes
+> * Use prefix lists and route maps to ensure only valid, authorized routes are accepted and advertised
+> * Limit BGP session peers to known IP addresses using ACLs or firewalls rules
+> * Consider implementing TTL security to restrict BGP session initiation to directly connected neighbors
+> * Isolate BGP routers from the general user network by placing them in dedicated management and control plane networks
+> * Use VPN or OOB management for BGP configurations where possible
+---
+### Troubleshooting:
+> * Neighbor stuck in idle or active?
+>   * Often due to incorrect IP or no route to neighbor
+> * Session Establishment Issues?
+>   * Verify that IP connectivity exists between BGP peers
+>   * Ensure that any ACLs or firewalls between peers allow TCP port 179
+>   * Confirm that BGP MD5 authentication matches on both sides
+>   * Check for any TTL security settings that might be causing issues
+>   * Compare neighbor configuration and AS numbers on both ends
+> * Routing Problems?
+>   * Check prefix lists and route maps to ensure routes are correctly filtered and modified
+>   * Adjust attributes via route maps if the chosen path is not optimal
+>   * Look for patterns in route withdrawals and re-advertisements that might indicate unstable links or configuration issues
+> * Common Pitfalls –
+>   * Ensure that the correct local and remote AS numbers are configured on both peers
+>   * Inconsistent prefix filtering can cause routes to be dropped. Validate your inbound/outbound policies
+>   * On high-traffic networks, ensure that routers have enough resources to process BGP updates, especially if running complex policy filters
+---
+### Insights:
+> * Network administrators often modify weight (locally) or local_pref (AS-wide) to control outbound path selection. Doing so overrides other path attributes.
+> * AS_PATH prepending is used to influence inbound traffic from other ASes by making your path look longer; taking advantage of shortest AS_PATH
+> * A lower MED indicates you prefer that entry point if an external AS has multiple routes into your AS
+> * Rarely do you get to oldest path, RID or IP in the path selection process, but they exist to ensure that only a single best path is chosen
+> * By default, BGP chooses only one best path. You can enable ECMP if routes are fully equal in attributes (weight, LP, AS_PATH, MED, etc)
+> * Communities indirectly affect the best path by triggering route-map logic that sets or modifies attributes like LOCAL_PREF or MED.
+> * Incorrect AS_PATH can cause suboptimal routing or black holing
+---
+### Commands:
+> *
+---
