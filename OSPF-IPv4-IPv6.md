@@ -120,7 +120,7 @@
 *OSPFv3 for IPv6 auth is handled differently*  
 
 ```
-*OSPF Common Header Definitions:*
+OSPF Common Header Definitions:
 ```
 
 #### OSPF Hello Packet (Type 1) = 
@@ -138,7 +138,7 @@ Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networ
 >   * variable - Neighbor IDs
 
 ```
-##### OSPF Hello Packet (Type 1) Header Definitions:
+OSPF Hello Packet (Type 1) Header Definitions:
 > * Neighbor IDs – list of RIDs from which Hellos have been seen on this interface within the Dead interval
 ```
 
@@ -154,7 +154,7 @@ Purpse: DBD packets provide a high-level summary of each LSA so neighbors can ch
 >   * variable - LSA Headers  
 
 ```
-*OSPF DBD Packet (Type 2) Header Definitions:*
+OSPF DBD Packet (Type 2) Header Definitions:
 > * DBD Sequence Number - sequence number for the master/slave relationship to ensure DBD packets are processed in the correct order; maintained by Master
 > * LSA Headers - a list of LSA headers that describe what is in the routers LSBD
 ```
@@ -168,7 +168,7 @@ Purpose: A neighbor uses LSR to ask for specific details of LSAs that it has det
 >   * 4 - Advertising Router
 
 ```
-##### OSPF LSR Packet (Type 3) Definitions:
+OSPF LSR Packet (Type 3) Definitions:
 > * LSA Requests –  one or more entries, each specifying an LS Type, LS ID and Advertising Router that the router wants from its neighbor
 > * LSA Type – ????
 > * Link State ID – ????
@@ -182,7 +182,7 @@ Purpose: Flood updated link-state info to neighbors when topology changes or in 
 >   * variable - LSAs
 
 ```
-##### OSPF LSU Packet (Type 4) Definitions:
+OSPF LSU Packet (Type 4) Definitions:
 > * Number of LSAs –  how many LSAs are in the packet
 > * LSAs – each LSA includes the 20-byte header + body fields
 ```
@@ -194,7 +194,36 @@ Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a c
 >   * variable - LSA Headers
 
 ```
-#### OSPF LSAck Packet (Type 5) Definitions:
+OSPF LSAck Packet (Type 5) Definitions:
 > * Number of LSAs – how many LSAs are being acknowledged
 > * LSA Headers – contains the headers of each LSA that are being acknowledged
 ```
+---
+
+### Best Practices:
+> * Limit number of routes per area (<50 for stability)
+> * Check for network type mismatch
+> * Manually set RID
+> * Summarize routes to ABRs to reduce LSA flooding
+> * Keep backbone area contiguous ????
+> * Use virtual links to connect an area to Area 0 when direct adjacency is not possible (design best to avoid using virtual links)
+> * Adjust timers in point-to-point networks for faster convergence
+> * Use LSA throttling features to manage rapid link transition
+> * Apply OSPF directly to the interface, instead of using network command in OSPF configuration
+---
+
+### Troubleshooting:
+> * Too many routers in a single area will slow down convergence
+---
+
+### Insights:
+> * If adjacency is stuck in Init or Down, ensure both sides have the same timers
+> * Routers in different areas in the same subnet won't form adjacencies
+> * Duplicate RIDs will cause adjacency or database instability
+> * Authentication mismatch will not form adjacency
+> * If one router is configured as a stub but neighbor is not the adjacency will fail
+> * OSPF multi-area design minimizes flooding and LSA overhead
+> * OSPF network types (broadcast, NBMA, point-to-point) can impact LSA exchanges and neighbor relations
+> * Stub, totally stubby and NSSA provide route-filtering strategies
+> * Neighbors must be in the same area to form adjacency
+---
