@@ -155,3 +155,17 @@ Purpse: DBD packets provide a high-level summary of each LSA so neighbors can ch
 > * DBD Sequence Number - sequence number for the master/slave relationship to ensure DBD packets are processed in the correct order; maintained by Master
 > * LSA Headers - a list of LSA headers that describe what is in the routers LSBD
 
+
+#### OSPF LSR Packet (Type 3) =
+Purpose: A neighbor uses LSR to ask for specific details of LSAs that it has determined missing or out of date. Requests missing or newer LSAs.
+> * |  Common Header | LSA Requests |
+>   * variable - LSA Requests
+>   * 4 - LSA Type
+>   * 4 - LS ID
+>   * 4 - Advertising Router
+
+##### OSPF LSR Packet (Type 3) Definitions:
+> * LSA Requests –  one or more entries, each specifying an LS Type, LS ID and Advertising Router that the router wants from its neighbor
+> * LSA Type – ????
+> * Link State ID – ????
+> * Advertising Router – RID of who originated the LSA
