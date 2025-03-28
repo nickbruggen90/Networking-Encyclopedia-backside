@@ -153,7 +153,7 @@ Purpse: DBD packets provide a high-level summary of each LSA so neighbors can ch
 >   * variable - LSA Headers  
 
 ```
-##### OSPF DBD Packet (Type 2) Header Definitions:
+*OSPF DBD Packet (Type 2) Header Definitions:*
 > * DBD Sequence Number - sequence number for the master/slave relationship to ensure DBD packets are processed in the correct order; maintained by Master
 > * LSA Headers - a list of LSA headers that describe what is in the routers LSBD
 ```
