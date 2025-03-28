@@ -126,16 +126,16 @@
 ##### OSPF Hello Packet (Type 1) = 
 Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networks and ensure two-way communication; maintains adjacencies
 > * | Common Header | Network Mask | Hello Int | Options | Router Prio. | Dead Int | DR | BDR | Neighbor ID |
-> * 4 - Network Mask (subnet mask of sending interface)
-> * 2 - Hello Interval
-> * 1 - Options (bitmask describing OSPF capabilities)
-> * 1 - Router Priority (used in DR/DBR election)
->   * 1 = default 
->   * 0 = ineligible
-> * 4 - Dead Interval 
-> * 4 - DR (IP of current DR on segment; 0.0.0.0 if none)
-> * 4 - BDR (IP of current DBR; 0.0.0.0 if none)
-> * variable - Neighbor IDs
+>   * 4 - Network Mask (subnet mask of sending interface)
+>   * 2 - Hello Interval
+>   * 1 - Options (bitmask describing OSPF capabilities)
+>   * 1 - Router Priority (used in DR/DBR election)
+>     * 1 = default 
+>     * 0 = ineligible
+>   * 4 - Dead Interval 
+>   * 4 - DR (IP of current DR on segment; 0.0.0.0 if none)
+>   * 4 - BDR (IP of current DBR; 0.0.0.0 if none)
+>   * variable - Neighbor IDs
 ##### OSPF Hello Packet (Type 1) Header Definitions:
 > * Neighbor IDs – list of RIDs from which Hellos have been seen on this interface within the Dead interval
 ---
