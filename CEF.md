@@ -13,3 +13,6 @@
 The IP routing table (RIB) is built by routing protocols. CEF then copies the best routes from the RIB into the FIB for fast forwarding decisions. CEF then checks the FIB for the longest prefix match to obtain the next-hop info. Then checks the adjacency table for L2 details. Forwards packets with minimal CPU involvement.
 >    * On ASIC-based devices (Catalyst switches, ASR) CEF data is in the hardware tables, enabling line-rate forwarding.
 ---
+### Timers:
+> CEF is designed for fast, hardware forwarding, so it does not have explicit “timers” in the same sense protocols like BGP or IPsec. However, aspects such as adjacency aging may apply – adjacency entries might be refreshed or removed based on underlying protocol updates (ARP or NDP refresh intervals)
+---
