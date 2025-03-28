@@ -11,7 +11,7 @@
 ---
 ### Multicast:
 > * IPv4 Multicast: 255.255.255.255 or 244.0.1.1
-> * IPv6 Multicast: FF02::101
+> * IPv6 Multicast: ff02::101
 ---
 ### Protocol/Port(s):
 > * UDP: 123
