@@ -169,3 +169,14 @@ Purpose: A neighbor uses LSR to ask for specific details of LSAs that it has det
 > * LSA Type – ????
 > * Link State ID – ????
 > * Advertising Router – RID of who originated the LSA
+
+
+#### OSPF LSU Packet (Type 4) = 
+Purpose: Flood updated link-state info to neighbors when topology changes or in response to LSRs. The actual LSAs being sent out/flooded.
+> * | Common Header | Number of LSAs | LSAs |
+>   * 4 - Number of LSAs
+>   * variable - LSAs
+
+##### OSPF LSU Packet (Type 4) Definitions:
+> * Number of LSAs –  how many LSAs are in the packet
+> * LSAs – each LSA includes the 20-byte header + body fields
