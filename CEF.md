@@ -9,6 +9,7 @@
 ---
 ### Evolution:
 *process switching (cpu-intensive per packet) → fast switching (cached, partial CPU-based) → CEF*  
+
 The IP routing table (RIB) is built by routing protocols. CEF then copies the best routes from the RIB into the FIB for fast forwarding decisions. CEF then checks the FIB for the longest prefix match to obtain the next-hop info. Then checks the adjacency table for L2 details. Forwards packets with minimal CPU involvement.
 >    * On ASIC-based devices (Catalyst switches, ASR) CEF data is in the hardware tables, enabling line-rate forwarding.
 ---
