@@ -138,4 +138,21 @@ Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networ
 >   * variable - Neighbor IDs
 ##### OSPF Hello Packet (Type 1) Header Definitions:
 > * Neighbor IDs – list of RIDs from which Hellos have been seen on this interface within the Dead interval
----
+
+
+
+##### OSPF DBD Packet (Type 2) = 
+Purpose: DBD packets provide a high-level summary of each LSA so neighbors can check what they have or are missing. Summaries of LSDB content to compare databases.
+> * | Common Header | Interface MTU | Options | DBD | DD Sequence Number | LSA Headers |
+>   * 2 - Interface MTU
+>   * 1 - Options (same optional capability bits as in Hello)
+>   * 1 - DBD *flags* I (initial) - set if this is the first DBD in a series
+>     * M (more) - more DBD packets to follow
+>     * MS (master/slave) - indicates M/S			 
+>   * 4 - DD Sequence Number
+>   * variable - LSA Headers  
+
+##### OSPF DBD Packet (Type 2) Header Definitions:
+> * DBD Sequence Number - sequence number for the master/slave relationship to ensure DBD packets are processed in the correct order; maintained by Master
+> * LSA Headers - a list of LSA headers that describe what is in the routers LSBD
+
