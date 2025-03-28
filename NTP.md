@@ -28,3 +28,9 @@
 > * Stratum 15 - “orphan stratum”; if all servers are inaccessible, devices can continue to sync each other using orphan stratum. Helps keep local time consistent in a complete outage  
 >   * Lower stratum levels are a more authoritative source. Typically, a client device has a stratum one higher than the server from which it’s learning time.
 ---
+### NTP Modes:
+> * Client – a device querying an NTP server
+> * Server – a higher stratum device that offers updates to the client
+> * Peer (symmetric) – two NTP-enabled devices (peers) can both supply time to each other
+> * Broadcast/Multicast – one device broadcasts time updates; listeners receive passively
+>   * Client/Server model uses unicast
