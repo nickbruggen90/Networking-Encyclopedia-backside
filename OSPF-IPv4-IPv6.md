@@ -9,7 +9,8 @@
 ### Timers 
 > * Hello Timer *broadcast and P2P* = 10 sec || Dead Timer = 40 sec (x4 Hello)  
 > * Hello Timer *NBMA, serial, Frame Relay* = 30 sec || Dead Timer = 120 sec (x4 Hello)  
-> * LSA Refresh Timer = 1800 sec (30 min) || LSA Retransmission Timer = 5 sec  
+> * LSA Refresh Timer = 1800 sec (30 min)
+> * LSA Retransmission Timer = 5 sec  
 > * LSA MaxAge Timer = 3600 sec (60 min)  
 ---
 ### Multicast:
