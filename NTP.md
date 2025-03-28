@@ -3,14 +3,14 @@
 ### Overview
 > * Synchronizes the clocks of network devices to a reference time source
 > * Operates on a client-server or peer-to-peer model
-> * NTP can be over IPv4 (255.255.255.255 or 224.0.1.1) and IPv6 (ff02::101)
+> * NTP can be over IPv4 (224.0.1.1) and IPv6 (ff02::101)
 ---
 ### Timers: 
 > * Poll Interval Timer – Common Ranges = 64 (minimum) - 1024 (maximum)  
 	*NTP dynamically adjusts poll interval between a minimum and maximum*
 ---
 ### Multicast:
-> * IPv4 Multicast: 255.255.255.255 or 244.0.1.1
+> * IPv4 Multicast: 244.0.1.1
 > * IPv6 Multicast: ff02::101
 ---
 ### Protocol/Port(s):
@@ -25,7 +25,8 @@
 > * Stratum 0 – reference clock (atomic clock, GPS receiver); non-networked references
 > * Stratum 1 – NTP server directly connected to Stratum 0 device
 > * Stratum 2 – syncs from a Stratum 1, and so on
-> * Stratum 15 - “orphan stratum”; if all servers are inaccessible, devices can continue to sync each other using orphan stratum. Helps keep local time consistent in a complete outage  
+> * Stratum 15 - “orphan stratum”; if all servers are inaccessible, devices can continue to sync each other using orphan stratum. Helps keep local time consistent in a complete outage
+> * Stratum 16 - error state 
 >   * Lower stratum levels are a more authoritative source. Typically, a client device has a stratum one higher than the server from which it’s learning time.
 ---
 ### NTP Modes:
