@@ -180,3 +180,14 @@ Purpose: Flood updated link-state info to neighbors when topology changes or in 
 ##### OSPF LSU Packet (Type 4) Definitions:
 > * Number of LSAs –  how many LSAs are in the packet
 > * LSAs – each LSA includes the 20-byte header + body fields
+
+
+#### OSPF LSAck Packet (Type 5) = 
+Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a certain time, the LSU is retransmitted. Acknowledgement to confirm LSUs were received.
+> * | Common Header | Number of LSAs | LSA Headers |
+>   * 4 - Number of LSAs
+>   * variable - LSA Headers
+
+#### OSPF LSAck Packet (Type 5) Definitions:
+> * Number of LSAs – how many LSAs are being acknowledged
+> * LSA Headers – contains the headers of each LSA that are being acknowledged
