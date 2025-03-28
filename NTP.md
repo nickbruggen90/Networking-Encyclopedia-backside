@@ -26,5 +26,5 @@
 > * Stratum 1 – NTP server directly connected to Stratum 0 device
 > * Stratum 2 – syncs from a Stratum 1, and so on
 > * Stratum 15 - “orphan stratum”; if all servers are inaccessible, devices can continue to sync each other using orphan stratum. Helps keep local time consistent in a complete outage  
-*Lower stratum levels are a more authoritative source. Typically, a client device has a stratum one higher than the server from which it’s learning time.
+>   * Lower stratum levels are a more authoritative source. Typically, a client device has a stratum one higher than the server from which it’s learning time.
 ---
