@@ -80,6 +80,9 @@ ___
 > * Option 90 = LDAP server
 > * Option 150 = TFTP server (Cisco)
 ---
+### Header Breakdown:
+> *
+---
 ### Key Benefits:
 > * Simplified Network Management – DHCP automates the assignments of IP addresses and configuration parameters, reducing the need for manual configuration and minimizes errors
 > * Efficient Resource Utilization – dynamic allocation of addresses ensures that IP addresses are reused efficiently, which is particularly important in large or dynamic networks
