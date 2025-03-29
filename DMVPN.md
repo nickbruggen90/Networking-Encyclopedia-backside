@@ -1,8 +1,8 @@
 # DMVPN - Cisco proprietary 
 
 ### Overview:
-> * Enables dynamic creation of IPsec tunnels; tunnels are created on-demand and torn down when not in use
-> *DMVPN provides a flexible, scalable solution by eliminating the need for a full mesh of static tunnels. This reduces configuration overhead and simplifies network design
+* Enables dynamic creation of IPsec tunnels; tunnels are created on-demand and torn down when not in use
+* DMVPN provides a flexible, scalable solution by eliminating the need for a full mesh of static tunnels. This reduces configuration overhead and simplifies network design
 ---
 ### Terminology/Definitions:
 > * DMVPN – a VPN solution that dynamically builds and tears down GRE tunnels between remote sites (spokes) over a common hub
