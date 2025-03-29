@@ -32,6 +32,8 @@
 > * Lease – a temporary allocation of an IP address to a DHCP client. The lease has a defined duration, after which the client must renew it
 > * DHCP Options – additional parameters provided by the DHCP server (domain name, NTP server, boot file names) using option fields
 ---
+> *DHCP Snooping* is a LAN switch feature that prevents untrusted ports from injecting DHCP offers. The switch builds a table of MAC-to-IP bindings from DHCP traffic on trusted interfaces. It blocks rogue DHCP servers on untrusted ports. Commonly used with DAI to prevent ARP spoofing.
+---
 ### DHCP Process:
 > * D - Discover – client broadcasts a DHCPDISCOVER
 > * O - Offer – one or more DHCP servers respond with DHCPOFFER; contains an available IP address, subnet mask, lease duration and other requested options
@@ -78,4 +80,52 @@ ___
 > * Option 90 = LDAP server
 > * Option 150 = TFTP server (Cisco)
 ---
-> *DHCP Snooping* is a LAN switch feature that prevents untrusted ports from injecting DHCP offers. The switch builds a table of MAC-to-IP bindings from DHCP traffic on trusted interfaces. It blocks rogue DHCP servers on untrusted ports. Commonly used with DAI to prevent ARP spoofing.
+### Key Benefits:
+> * Simplified Network Management – DHCP automates the assignments of IP addresses and configuration parameters, reducing the need for manual configuration and minimizes errors
+> * Efficient Resource Utilization – dynamic allocation of addresses ensures that IP addresses are reused efficiently, which is particularly important in large or dynamic networks
+> * Centralized Control – DHCP allows network administrators to maintain centralized control over IP address allocation, simplifying management and troubleshooting
+> * Scalability – DHCP is scalable to support large networks and can be integrated with additional protocols (like DHCP Snooping) to enhance security in high-density environments
+> * Reduced Administrative Overhead – automation of IP configuration and renewal processes frees up administrative resources to focus on other tasks
+---
+### Use Cases:
+> * Enterprise Networks – automatically assign IP addresses to a large number of devices, ensuring consistent configuration across the network
+> * Guest Networks – provide temporary IP addressing for guest users while enforcing restrictions using DHCP Snooping and VLAN segmentation
+> * Wireless Networks – in conjunction with 802.1X and DHCP Snooping, secure wireless access and prevent unauthorized devices from obtaining network configurations
+> * Data Centers and Cloud Environments – manage IP address allocation for dynamic workloads and virtual machines, enabling efficient resource utilization and simplified management
+> * Use DHCP to provision customer devices, with tight controls to prevent unauthorized or rogue devices from joining the networks
+---
+### Best Practices/Security Considerations:
+> * Keep well-defined subnets, ensuring enough address. Plan your address space wisely.
+> * Reserve your gateway IP, network devices and any static hosts; use exclusion
+> * Enable DHCP Snooping to block rogue devices
+> * Use Option 6 to provide a correct DNS server address
+> * Ensure DHCP Snooping is enabled on all access ports and VLANs. This prevents unauthorized DHCP servers from assigning IP addresses and injecting malicious configurations
+> * Configure trusted ports only where legitimate DHCP servers are connected. All user-facing ports should be untrusted
+> * DHCP over IPv4 is not encrypted by default, use DHCPv6 with authentication where available. For IPv4, secure the management plane to prevent interception of modification of DHCP messages
+> * Implement rate limiting on DHCP traffic to minimize the impact of potential DoS attacks
+> * Regularly monitor DHCP logs and the DHCP Snooping binding table to detect unusual patterns that could indicate an attack
+> * Use network segmentation and ACLs to restrict DHCP traffic to authorized areas only
+> * Ensure that DHCP clients receive addresses from a controlled pool. Integrate DHCP Snooping with IP Source Guard to validate that devices use the correct IP addresses associated with their MAC addresses
+---
+### Troubleshooting:
+> * No DHCP Response/IP Address Not Assigned?
+>   * Verify that the client is physically connected and the interface is enabled
+> * Authentication or Filtering Problems?
+>   * Verify that ports connected to legitimate DHCP servers are marked as trusted
+>   * Confirm that untrusted ports are correctly configured to allow client DHCP messages
+> * Monitor DHCP traffic and ensure that rate limiting is not too restrictive
+> * Check Syslog messages for any DHCP-related errors or warnings
+> * Ensure SNMP traps are properly configured to alert you to DHCP server issues
+> * Ensure DHCP Snooping is correctly configured on the VLAN. If misconfigured, valid DHCP offers might be dropped
+> * Confirm that the client can reach the DHCP server. Verify that any DHCP relay (helper address) configurations are correct
+> * Check the lease time settings on the DHCP server. If the lease time is too short, frequent renewals may cause connectivity issues
+> * Ensure there are enough available addresses in the DHCP pool. If the pool is exhausted, new devices cannot obtain an IP
+---
+### Insights:
+> * Excluded ranges can overlap and inadvertently reduce your pool size to zero
+> * No IP helps or a wrong IP helper leads to clients not receiving addresses
+> * Ensure NTP is set, especially if the DHCP server provides option 42 (NTP server)
+---
+### Commands:
+> *
+---
