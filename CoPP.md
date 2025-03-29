@@ -46,3 +46,26 @@
 > * SP Devices – in multi-tenant or high-traffic environments, CoPP prevents control plane overloads, ensuring continued protocol exchanges and management access
 > * Data Centers and Cloud Networks – maintains stability and performance in complex environments where control plan stability is critical to service delivery
 ---
+### Best Practices/Secuirty Considerations:
+> * Understand the specific control plane requirements of your network. Rate limits should be set based on the expected load from essential protocols
+> * Use distinct class-maps for critical protocols like OSPF, BGP and EIGRP to ensure they receive appropriate priority
+> * As network traffic patterns change, periodically audit and adjust your CoPP policies
+> * Maintain thorough documentation of all CoPP policies, class-maps and ACLs for troubleshooting and future audits
+> * CoPP should be part of a layered security approach that includes MPP, AAA, secure management protocols and additional filtering where necessary
+> * Always test in sandbox/lab environments
+> * CoPP should be deployed alongside other security mechanisms (ACLs, DHCP Snooping, DAI) to provide a layered security approach
+> * Configure SNMP traps and Syslog alerts for CoPP violations to ensure timely detection and response to suspicious activity
+> * Maintain clear documentation of all CoPP configurations, including the reasoning behind specific rate limits and policies
+> * Any modifications to CoPP settings should follow a rigorous change management process to prevent disruptions to the control plane
+---
+### Troubleshooting:
+> * Verify rate limits are appropriately set
+> * Ensure that critical protocols are not inadvertently matched by a restrictive ACL
+> * Double check the class-map definitions to ensure correct protocol matching
+---
+### Insights:
+> * CoPP segregates control traffic from user traffic, ensuring that attacks or misbehaving user traffic does not compromise the router’s decision-making process
+> * By filtering out unexpected or high-volume traffic, CoPP helps protect against various attacks, such as ICMP floods, routing protocol spoofing or other attempts to overload the control plan
+> * Overly aggressive CoPP policies can inadvertently block legitimate control traffic. It is crucial to tune the rate limits and thresholds carefully through lab testing and monitoring before full deployment
+> * Consider implementing fallback mechanisms or redundancy to ensure that if a CoPP policy is misconfigured, it does not lead to complete control plane isolation
+---
