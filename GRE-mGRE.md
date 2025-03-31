@@ -29,4 +29,34 @@
 > 2. Forwarding – the packet is routed through the underlay network based on the outer IP header
 > 3. Decapsulation (egress) – the egress router movies the GRE and outer IP headers and forwards the original packet toward its destination
 ---
+### mGRE Operational Overview: 
+> * With mGRE, a single tunnel interface is configured to accept GRE encapsulated packets from multiple remote endpoints. The router uses additional mechanisms (like NHRP) to dynamically determine which remote endpoint to use for a given traffic flow.
+---
+### Header Breakdown: 4 to 8 bytes
+> * 16 - Flags and Versions
+> * 16 - Protocol Type (0x0800 for IPv4, 0x86DD for IPv6)
+
+#### Optional Fields = 	
+> * 16 - Checksum - triggered by flag C
+> * 16 - Reserved (for Checksum) - triggered by flag C
+> * 32 - Key - triggered by flag K
+> * 32 - Sequence Number - triggered by flag S
+---
+### Header Definitions:
+> * Flags –
+>   * C (Checksum Present): 1 bit
+>   * R (Routing Present): 1 bit
+>   * K (Key Present): 1 bit
+>   * S (Sequence Number Present): 1 bit
+>   * S (Strict Source Routing): 1 bit
+>   * Recur (Recursion Control): 3 bits
+>   * A (Acknowledgement Present): 1 bit
+>   * Version (typically 0): 3 bits
+> * Protocol Type – Indicates the type of payload encapsulated
+> * Checksum – optional checksum of the GRE payload
+> * Key – key used to identify the GRE tunnel
+> * Sequence Number – indicates ordering of GRE packets
+> * *mGRE uses the same header format; however, mGRE’s key may be used to differentiate among multiple tunnel endpoints*
+
+
 
