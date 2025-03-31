@@ -25,8 +25,8 @@
 > * mGRE extends GRE by allowing one tunnel interface to establish tunnels to multiple remote endpoints. This reduces configuration overhead and is essential for scalable overlay networks. In deployments such as DMVPN, mGRE works in tandem with protocols like NHRP to dynamically learn and map remote tunnel endpoints.
 ---
 ### GRE Operational Overview:
-> * 1. Encapsulation (ingress) – the ingress router receives a packet, encapsulates it with a GRE header and then adds an outer IP header with the tunnel endpoints IP addresses
-> * 2. Forwarding – the packet is routed through the underlay network based on the outer IP header
-> * 3. Decapsulation (egress) – the egress router movies the GRE and outer IP headers and forwards the original packet toward its destination
+> 1. Encapsulation (ingress) – the ingress router receives a packet, encapsulates it with a GRE header and then adds an outer IP header with the tunnel endpoints IP addresses
+> 2. Forwarding – the packet is routed through the underlay network based on the outer IP header
+> 3. Decapsulation (egress) – the egress router movies the GRE and outer IP headers and forwards the original packet toward its destination
 ---
 
