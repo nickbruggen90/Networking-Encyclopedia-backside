@@ -32,6 +32,7 @@
 >     * Traffic Classification – identify control plane traffic by matching protocol types (ICMP, BG), SSH, SNMP) using class-maps
 >     * Policy Enforcement – create policy-maps that define actions (rate limiting, policing or dropping) for each traffic class
 >     * Binding the Policy – apply the policy to the control plane using control-plane command or through dedicated control plane interfaces
+---
 ### Key Benefits:
 > * Traffic Filtering – CoPP protects the router's control plane by filtering out malicious or unnecessary traffic destined for it. This ensures that only legitimate traffic (such as routing protocol updates and management traffic) reaches the CPU
 > * Preventions of DoS Attacks – by policing traffic to the control plane, CoPP helps prevent DoS attacks. Excessive traffic (from floods, DDoS attempts or misconfiguration) is dropped or rate-limited, preserving CPU resources
