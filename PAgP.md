@@ -75,9 +75,11 @@
 > * TLV Fields – Type-Length-Value fields contain additional parameters such as PAgP timers, interface settings and neighbor information
 > * PAgP Flags – used for state signaling within PAgP, indicating active negotiation and channel status
 > * PAgP Timer – controls the interval at which PAgP messages are exchanged (default is 30 sec)
----
+--- 
+
 *Silent*: The local side can form a channel if it doesn’t hear PAgP frames from the remote side. Silent mode is useful if the remote device does not send PAgP but can still operate in a mode that appears “silent”
 *Non-Silent*: The local side expects to hear PAgP frames, if none are received then the link will not join the bundle
+
 ---
 ### Best Practices/Security Considerations: 
 > * Ensure timers, speed, duplex, VLAN settings (trunk mode/native VLAN, etc), switchport mode and STP feature settings are uniform across member interfaces
