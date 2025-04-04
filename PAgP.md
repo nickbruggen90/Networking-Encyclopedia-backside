@@ -20,7 +20,7 @@
 > * Protocol ID = 0x0104
 ---
 ### Priorities:
-> * Port Priority = 0 - 255 (128 is default)
+> * Port Priority = 0 - 255 (128 is default)  
 *Lower priority takes precedence*
 ---
 ### Terminology/Definitions:
