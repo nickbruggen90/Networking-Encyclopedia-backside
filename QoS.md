@@ -121,6 +121,7 @@ Ranges from 0 - 7, with higher value indicating higher priority
 >   * Fix: Ensure classification and marking policies are applied at the edge and that core devices are configured to trust those markings
 > * Voice or video traffic experiencing jitter or delay?
 >   * Cause?: use LLQ or voice (priority in policy-map), verify bandwidth allocations, and check for queue starvations of other classes
+>   * Fix:
 > * Excessive packet drops under load?
 >   * Cause?: misconfigured policers or insufficient bandwidth allocation
 >   * Fix?: review policing rates, ensure shaping is used where needed, and increase buffer sizes or bandwidth guarantees for affected classes
