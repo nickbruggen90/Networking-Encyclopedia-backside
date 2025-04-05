@@ -41,15 +41,52 @@
 > * Certificates – PKI, SSL
 > * Authentication – Kerberos, 802.1X
 ---
-### Best Practices:
+### Best Practices/Security Considerations:
 > * Configure at least two servers for redundancy
 > * Use authentication
 > * Keep a good hierarchy. Avoid multiple devices referencing each other in a loop
 > * Only use NTP Master if there is no external time source available
 > * Make sure UDP 123 is open and NTP server is reachable; check ACLs blocking UDP 123
+> * Only allow synchronization from trusted sources. Use ACLs or the restrict command to limit which systems can query or modify time.
+> * Deploy one more internal stratum 1 or 2 servers. Do not solely rely on public NTP sources
+> * Disable monitoring, control queries and mode 6/7 packets unless absolutely necessary
+> * Avoid NTP over public networks when possible
+> * Use symmetrical-routing and low-latency paths, especially in real-time environments (VoIP, finance), as asymmetry can cause time drift
+> * Regularly monitor NTP logs and peer status
+> * Manually set the initial clock for new devices
+> * Isolate NTP traffic; optionally use QoS or CoPP to protect NTP packets from congestion or abuse
 ---
-### Troubleshooting:
-> *
+### Common Issues anf Fixes:
+> * Incorrect system time?
+>   * Cause?: no reachable NTP server or invalid server configured
+>   * Fix: verify NTP server IP is correct and reachable; test with ping or ntp peer commands
+> * High offset or jitter?
+>   * Cause?: unstable network path or high latency
+>   * Fix: prefer local or geographically close NTP servers; review network path and QoS for stability
+> * NTP association stuck in INIT or INSANE state?
+>   * Cause?: authentication mismatch or large time difference
+>   * Fix: ensure both sides share the correct key; manually set the clock close to real time before retry
+> * Server not syncing?
+>   * Cause?: ACL misconfiguration (restrict too tight)
+>   * Fix: review and adjust ntp access-group or restrict statements to permit sync from trusted sources
+> * Unexpected NTP peer chosen?
+>   * Cause?: lower stratum peer is unreachable or unstable
+>   * Fix: use ntp peer or ntp server with prefer keyword to influence server selection
+> * NTP flap or bouncing peers?
+>   * Cause?: inconsistent connectivity or bad time source
+>   * Fix: remove unreliable NTP servers; verify interface stability and routing path
+> * Time gradually drifting again after sync?
+>   * Cause?: no regular updates or polling is blocked
+>   * Fix?: ensure device maintains regular communication with NTP source; check firewall and polling intervals
+> * Log messages showing “no association ID” or “No server specified”?
+>   * Cause?: misconfigured or missing NTP peer setup
+>   * Fix: double check ntp server, ntp peer, or ntp master configuration commands
+> * Router/Device losing sync after reload?
+>   * Cause?: NTP takes time to reestablish after boot
+>   * Fix: consider setting a hardware clock (clock set) and synchronizing in post-NTP lock with ntp update-calander
+> * NTP used in DoS/amplification attack?
+>   * Cause?: NTP takes time to reestablish after boot
+>   * Fix: disable or restrict monlist, control queries and consider upgrading to versions without this vulnerability
 ---
 ### Insights:
 > * On Linux/Unix NTP daemons, you can adjust the minpoll/maxpoll settings in ntp.conf
