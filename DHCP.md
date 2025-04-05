@@ -97,8 +97,8 @@ ___
 >   * 64 - sname –
 >   * 128 - file –
 >   * variable - options –
----
-### Header Definitions:
+
+#### Header Definitions:
 > * op – message type; 1 = BOOTREQUEST (from client), 2 = BOOTREPLY (from server)
 > * htype – hardware type; 1 = Ethernet
 > * hlen – hardware address length (6 for MAC)
