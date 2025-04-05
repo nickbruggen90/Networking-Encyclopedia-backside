@@ -8,7 +8,7 @@
 ### Timers:
 > * REST API transactions are generally stateless and rely on HTTP timeouts. Most REST clients have configurable timeout values (commonly 30-60 sec) for waiting on a response from the device
 ---
-###Multicast:
+### Multicast:
 >* REST API communications are inherently unicast (HTTP/HTTPS). There are no multicast considerations specifically for REST APIs
 ---
 ### Protocol/Port(s):
