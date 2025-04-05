@@ -12,8 +12,8 @@
 >* REST API communications are inherently unicast (HTTP/HTTPS). There are no multicast considerations specifically for REST APIs
 ---
 ### Protocol/Port(s):
----
-### Priorities:
+> * REST APIs rely on HTTP port 80 and HTTPS port 443
+> * When you are interacting with REST APIs using tools like Postman, Python or Ansible, you're typically communicating over HTTPS.
 ---
 ### Terminology/Definitions:
 > * REST – an architectural style for designing networked applications that use standard HTTP methods to operate on resources identified by URIs
@@ -90,7 +90,36 @@
 > * Make sure you specify the correct headers (application/yang-data+json or application/yang-data+xml) so that the device returns the expected data format
 ---
 ### Common Issues and Fixes:
-> *
+> * API Call Fails with 401/403 Unauthorized?
+>   * Cause?: Invalid credentials or token expired
+>   * Fix: Re-authenticate and obtain a fresh token or API key. Ensure the token is included in the *Authorization* header.
+> * Slow or Unstable API Responses?
+>   * Cause?: High latency, poor QoS, or rate limiting
+>   * Fix: Tag REST traffic with appropriate DSCP values. Prioritize control plane traffic via CoPP or QoS. Check for throttling policies on the server/API gateway
+> * API Call Times out (504 Gateway Timeout)?
+>   * Cuase?: Backend service overload, unreachable controller
+>   * Fix: Confirm reachability to the API server/controller. Check backend service health and resource usage. Increase client timeout value if needed.
+> * "Connection Refused" or No Route to Host?
+>   * Cause?: Wrong IP/port or firewall/ACL blocking the request
+>   * Fix: Verify the correct API endpoint and port. Ensure access is allowed via firewall/ACLs
+> * JSON/XML Response Format Error?
+>   * Cause?: Unexpected payload structure or encoding issues
+>   * Fix: Confirm the API version and expected content format. Use tools like Postman, Python (*requests* libraries) or *curl* to inspect raw responses.
+> * Invalid Method (405 Method Not Allowed)?
+>   * Cause?: Using wrong HTTP verb
+>   * Fix: Check API documentation for correct format. Some resources are read-only and don't allow rules.
+> * Rate Limiting (429 Too Many Requests)?
+>   * Cause?: Sending to many requests in a short time
+>   * Fix: Implement exponetial backoff or throttling logic. Respect Retry-After headers in the repsonse\
+> * API Works in Postman but Failes in Python/Script?
+>   * Cause?: Headers, SSL certs, or request body mismatch
+>   * Fix: Compare raw HTTP requests. Ensure your code sets Content-Type anf Accept headers correctly. Use tools like requests in Python with proper SSL verification.
+> * Certificate Verification Errors?
+>   * Cause?: Self-signed cert or CA mismatch
+>   * Fix: Import or trust the certificate on the client. Use *verify=False* only temporarily for testing (not recommended in production)
+> * Partial Data Returned or Truncated Response?
+>   * Cause?: Pagination in API responses
+>   * Fix: Check for next or offset in response. Loop through paginated results until all data is retrieved.
 ---
 ### Insights:
 > * You can test REST API endpoints using tools like Postman to view responses and debug issues
