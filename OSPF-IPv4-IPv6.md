@@ -91,7 +91,6 @@
 > * E1 – routes from outside the OSPF domain redistributed into OSPF by an ASBR. Like N1, the metric includes both the internal OSPF cost and the external cost
 > * N2 – external routes from an NSSA where only the external metric is considered, ignoring internal OSPF cost to the ASBR
 > * E2 – default type for routes redistributed into OSPF. Metric reflects only the external cost, regardless of the internal OSPF cost to the ASBR. Least preferred.
-
 ---
 ### OSPF Authentication Options:
 > * Null Auth – no auth; default
