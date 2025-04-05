@@ -83,23 +83,15 @@
 > * Type 10 LSA –
 > * Type 11 LSA – 
 ---
-### OSPF Route Types:
-> * Intra-Area Routes – routes within the same area; uses SPF algorithm
-> * Inter-Area Routes – routes between different areas, advertised as summary LSAs
-> * External Routes – routes from outside the OSPF AS
->   * Type 1 External (E1) – sum of the internal cost to the ASBR plus the external cost
->   * Type 2 External (E2) – cost is based solely on external metrics (default in most cases)
->   * NSSA External Type 1 (N1) –
->   * NSSA External Type 2 (N2) –
----
-### OSPF Route Prioritization:
-> * O → O IA → N1 → E1 → N2 → E2
-> * O –
-> * O IA –
-> * N1 –
-> * E1 –
-> * N2 –
-> * E2 –
+### OSPF Route Types and Prioritization:  
+> O → O IA → N1 → E1 → N2 → E2
+> * O – routes learned within the same OSPF area. These are considered the most trustworthy and preferred because they are internal to the area and require no inter-area routing.
+> * O IA – routes learned from another area via an ABR. Still trusted, by slightly less than intra-area routes
+> * N1 – external routes learned from a NSSA where Type 1 cost is used. The metric includes both the external cost and the internal OSPF cost to reach the advertising ASBR
+> * E1 – routes from outside the OSPF domain redistributed into OSPF by an ASBR. Like N1, the metric includes both the internal OSPF cost and the external cost
+> * N2 – external routes from an NSSA where only the external metric is considered, ignoring internal OSPF cost to the ASBR
+> * E2 – default type for routes redistributed into OSPF. Metric reflects only the external cost, regardless of the internal OSPF cost to the ASBR. Least preferred.
+
 ---
 ### OSPF Authentication Options:
 > * Null Auth – no auth; default
