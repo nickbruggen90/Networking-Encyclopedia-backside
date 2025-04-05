@@ -59,7 +59,7 @@
 ### Common Issues and Fixes:
 > * Incorrect system time?
 >   * Cause?: no reachable NTP server or invalid server configured
->   * Fix: verify NTP server IP is correct and reachable; test with ping or ntp peer commands
+>   * Fix: verify NTP server IP is correct and reachable; test with *ping* or *ntp peer* commands
 > * High offset or jitter?
 >   * Cause?: unstable network path or high latency
 >   * Fix: prefer local or geographically close NTP servers; review network path and QoS for stability
@@ -67,11 +67,11 @@
 >   * Cause?: authentication mismatch or large time difference
 >   * Fix: ensure both sides share the correct key; manually set the clock close to real time before retry
 > * Server not syncing?
->   * Cause?: ACL misconfiguration (restrict too tight)
->   * Fix: review and adjust ntp access-group or restrict statements to permit sync from trusted sources
+>   * Cause?: ACL misconfiguration (*restrict* too tight)
+>   * Fix: review and adjust *ntp access-group* or *restrict* statements to permit sync from trusted sources
 > * Unexpected NTP peer chosen?
 >   * Cause?: lower stratum peer is unreachable or unstable
->   * Fix: use ntp peer or ntp server with prefer keyword to influence server selection
+>   * Fix: use *ntp peer* or *ntp server* with *prefer* keyword to influence server selection
 > * NTP flap or bouncing peers?
 >   * Cause?: inconsistent connectivity or bad time source
 >   * Fix: remove unreliable NTP servers; verify interface stability and routing path
@@ -80,13 +80,13 @@
 >   * Fix?: ensure device maintains regular communication with NTP source; check firewall and polling intervals
 > * Log messages showing “no association ID” or “No server specified”?
 >   * Cause?: misconfigured or missing NTP peer setup
->   * Fix: double check ntp server, ntp peer, or ntp master configuration commands
+>   * Fix: double check *ntp server*, *ntp peer*, or *ntp master* configuration commands
 > * Router/Device losing sync after reload?
 >   * Cause?: NTP takes time to reestablish after boot
->   * Fix: consider setting a hardware clock (clock set) and synchronizing in post-NTP lock with ntp update-calander
+>   * Fix: consider setting a hardware clock (*clock set*) and synchronizing in post-NTP lock with *ntp update-calander*
 > * NTP used in DoS/amplification attack?
->   * Cause?: NTP takes time to reestablish after boot
->   * Fix: disable or restrict monlist, control queries and consider upgrading to versions without this vulnerability
+>   * Cause?: mode 6/7 queries or monlist allowed from public
+>   * Fix: disable or restrict *monlist*, control queries and consider upgrading to versions without this vulnerability
 ---
 ### Insights:
 > * On Linux/Unix NTP daemons, you can adjust the minpoll/maxpoll settings in ntp.conf
