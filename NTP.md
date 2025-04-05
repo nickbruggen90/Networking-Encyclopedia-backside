@@ -56,7 +56,7 @@
 > * Manually set the initial clock for new devices
 > * Isolate NTP traffic; optionally use QoS or CoPP to protect NTP packets from congestion or abuse
 ---
-### Common Issues anf Fixes:
+### Common Issues and Fixes:
 > * Incorrect system time?
 >   * Cause?: no reachable NTP server or invalid server configured
 >   * Fix: verify NTP server IP is correct and reachable; test with ping or ntp peer commands
