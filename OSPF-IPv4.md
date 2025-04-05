@@ -1,4 +1,4 @@
-# OSPF - RFC 2328 (OSPFv2, IPv4), RFC 5340 (OSPFv3, IPv6)
+# OSPF IPv4 - RFC 2328 (OSPFv2, IPv4)
 
 ### Overview
 * A link-state IGP protocol used within an AS  
