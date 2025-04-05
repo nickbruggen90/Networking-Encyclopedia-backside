@@ -114,6 +114,9 @@ ___
 > * sname – options server host name
 > * file – boot file name (used for PXE boot, etc)
 ---
+### Broadcast Flags:
+> *
+---
 ### Key Benefits:
 > * Simplified Network Management – DHCP automates the assignments of IP addresses and configuration parameters, reducing the need for manual configuration and minimizes errors
 > * Efficient Resource Utilization – dynamic allocation of addresses ensures that IP addresses are reused efficiently, which is particularly important in large or dynamic networks
