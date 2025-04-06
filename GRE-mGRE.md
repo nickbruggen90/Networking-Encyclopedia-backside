@@ -38,8 +38,8 @@
 >   * The physical interfaces (or loopback) must not be in the same subnet (could cause a loop)
 >   * The IP address assigned to the tunnel interfaces must be in the same subnet (dynamic routing protocols expect adjacent interfaces to be on the same subnet)
 >   * A route to the tunnel destination must exist on the local router
->   ** The interface state must be up/up
-```
+>   * The interface state must be up/up
+
  1. GRE tunnels encapsulate private IP packets within public IP headers. This allows two private networks to communicate over the public internet.  
 2. The tunnel source and destination IP addresses must be publicly routable so that intermediate routers can deliver packets between two tunnel endpoints. Usually, these are the public IPs of the routers (like ISP-facing interfaces).  
 3. GRE supports multicast, broadcast and non-IP protocols, which makes it ideal for routing protocols (like OSPF, EIGRP) to run across the tunnel.  
