@@ -12,6 +12,15 @@
 ### Multicast:
 > * GRE/mGRE can encapsulate multicast traffic. In DMVPN scenario with GRE, multicast traffic might be flooded or replicated using dynamic mechanisms (often leveraging unicast replication with NHRP) to optimize performance.
 ---
+### Protocol/Ports(s):
+> * IP: 47
+>   * IKE – UDP: 500
+>   * ESP – IP: 50
+>   * AH – IP: 51
+---
+### Priorities:
+> * GRE encapsulated packets can carry DSCP values in the outer IP header, allowing for QoS classification. Copying the DSCP to the outer header is critical.
+---
 ### Terminology/Definitions:
 > * GRE – a tunneling protocol that encapsulates network layer packets in a GRE header, allowing them to be forwarded over an IP network
 > * mGRE – an extension of GRE that supports multiple tunnel endpoints on a single interface, enabling dynamic peer-to-peer tunnel establishment
@@ -103,6 +112,9 @@
 ### Insights:
 > * Since GRE lacks native security features, combining it with encryption (IPsec, etc) is crucial in untrusted environments
 > * While GRE is relatively simple to configure, mGRE adds flexibility for multipoint connectivity but may require additional protocols (like NHRP) for optimal operation
+> * GRE must be explicitly allowed via IP protocol 47, most firewalls block this by default
+> * GRE does not NAT well by default because there are no ports to track in NAT tables. Use static NAT or NAT with GRE-aware inspection if needed.
+> * Without DSCP inheritance, tunneled traffic may be treated as best-effort, even if the original traffic was marked for priority.
 ---
 ### Commands:
 > * 
