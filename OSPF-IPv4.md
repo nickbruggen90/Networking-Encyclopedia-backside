@@ -35,8 +35,8 @@
 > * DR – acts as  a central point in exchanging LSAs; generates network LSAs
 > * BDR – takes over if DR fails
 > * Internal Router – generates router link LSAs
-> * ABR –
-> * ASBR –
+> * ABR – a router that connects one or more OSPF areas to the backbone. It maintains separate LSDBs for each area it’s connected to and summarize routing information between areas, acting as a gateway for inter-area traffic
+> * ASBR – a router that redistributes external routes (from outside the OSPF domain) into the OSPF process. It can exist within any OSPF area and is responsible for originating Type 5 LSAs or Type 7 LSAs
 ---
 ### OSPF Packet Types:
 > * Hello (1) – establishes and maintains neighbor relationships
