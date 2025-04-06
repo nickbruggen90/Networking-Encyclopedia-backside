@@ -13,7 +13,7 @@
 > * GRE/mGRE can encapsulate multicast traffic. In DMVPN scenario with GRE, multicast traffic might be flooded or replicated using dynamic mechanisms (often leveraging unicast replication with NHRP) to optimize performance.
 ---
 ### Protocol/Ports(s):
-> * IP: 47
+> * GRE/mGRE - IP: 47
 >   * IKE – UDP: 500
 >   * ESP – IP: 50
 >   * AH – IP: 51
