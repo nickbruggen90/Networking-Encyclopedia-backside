@@ -27,7 +27,7 @@
 ### GRE Operational Overview:
 > 1. Encapsulation (ingress) – the ingress router receives a packet, encapsulates it with a GRE header and then adds an outer IP header with the tunnel endpoints IP addresses
 > 2. Forwarding – the packet is routed through the underlay network based on the outer IP header
-> 3. Decapsulation (egress) – the egress router movies the GRE and outer IP headers and forwards the original packet toward its destination
+> 3. Decapsulation (egress) – the egress router removes the GRE and outer IP headers and forwards the original packet toward its destination
 ---
 ### mGRE Operational Overview: 
 > * With mGRE, a single tunnel interface is configured to accept GRE encapsulated packets from multiple remote endpoints. The router uses additional mechanisms (like NHRP) to dynamically determine which remote endpoint to use for a given traffic flow.
