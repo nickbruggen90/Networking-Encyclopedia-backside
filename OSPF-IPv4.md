@@ -174,13 +174,19 @@ Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a c
 ### Best Practices/Security Considerations:
 > * Limit number of routes per area (<50 for stability)
 > * Check for network type mismatch
-> * Manually set RID
+> * Manually set RID; assign a /32 loopback interface as the RID; avoid duplicate RIDs
 > * Summarize routes to ABRs to reduce LSA flooding
-> * Keep backbone area contiguous ????
+> * Keep backbone area contiguous; make sure all areas connect to Area 0
 > * Use virtual links to connect an area to Area 0 when direct adjacency is not possible (design best to avoid using virtual links)
 > * Adjust timers in point-to-point networks for faster convergence
 > * Use LSA throttling features to manage rapid link transition
 > * Apply OSPF directly to the interface, instead of using network command in OSPF configuration
+> * Use passive-interface only on interfaces where no OSPF neighbors are expected
+> * Use MD5 authentication
+> * Use CoPP to protect the routers CPU from OSPF floods or malformed packets
+> * Use passive-interface default and selectively enabled OSPF on uplinks to prevent rogue neighbors
+> * For WAN/MPLS scenarios, form adjacencies only with trusted routers
+> * Disable multicast on unused interfaces
 ---
 ### Common Issues and Fixes:
 > * Too many routers in a single area will slow down convergence
