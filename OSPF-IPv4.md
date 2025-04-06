@@ -171,7 +171,7 @@ Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a c
 > * Number of LSAs – how many LSAs are being acknowledged
 > * LSA Headers – contains the headers of each LSA that are being acknowledged
 ---
-### Best Practices:
+### Best Practices/Security Considerations:
 > * Limit number of routes per area (<50 for stability)
 > * Check for network type mismatch
 > * Manually set RID
@@ -182,11 +182,39 @@ Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a c
 > * Use LSA throttling features to manage rapid link transition
 > * Apply OSPF directly to the interface, instead of using network command in OSPF configuration
 ---
-
-### Troubleshooting:
+### Common Issues and Fixes:
 > * Too many routers in a single area will slow down convergence
+> * Neighbors Stuck in INIT or 2-Way State?
+>   * Cause?: Mismatched OSPF interface types or missing unicast hellos
+>   * Fix: Confirm interface types match (P2P vs broadcast), check multicast reachability (224.0.0.5), verify hello packets are being received with debug ip ospf hello, use ip ospf network broadcast or point-to-point explicitly if needed
+> * Adjacency Forms, but Routes Not Appearing in Routing Table?
+>   * Cause?: LSAs exchanged but SPF not triggered, or missing network command
+>   * Fix: confirm area configuration and correct network statements under router ospf, ensure passive-interface is not set where it shouldn’t be, use show ip ospf database and show ip route ospf to confirm presence of LSAs and routes
+> * OSPF Not Establishing Neighbor Relationship?
+>   * Cause?: Hello/dead timers mismatch, subnet mismatch, or MTU mismatch
+>   * Fix: ensure hello and dead timers match, verify interfaces are in the same subnet, check MTU on both interfaces, confirm OSPF is enabled on the interface
+> * Flapping OSPF Neighbors?
+>   * Cause?: unstable link, low dead interval, or excessive CPU usage
+>   * Fix: increase dead interval if too aggressive, investigate physical layer, check for CPU spikes with show processes cpu that may delay hello/DBD packets
+> * OSPF Routes Not Being Redistributed Properly?
+>   * Cause?: missing redistribute command or wrong route-map
+>   * Fix: double check redistribute [protocol] subnets is present, verify associated route-map permits the desired prefixes, confirm external routes appear in show ip ospf database external
+> * OSPF Cost Misbehavior or Unequal Load-Balancing?
+>   * Cause?: inconsistent bandwidth statements or manual cost configuration
+>   * Fix: use bandwidth command on interfaces or explicitly set ip ospf cost, verify cost is consistent across paths where needed, show with show ip ospf interface
+> * LSA Flooding or High CPU Due to Topology Changes?
+>   * Cause?: flapping links or unstable neighbors generating frequent LSA updates
+>   * Fix: investigate and stabilize physical connectivity, use ip ospf transmit-delay and hello/dead interval tuning for WAN links, limit SPF frequency with timers throttle spf and lsa group-pacing
+> * OSPF Routes Not Preferred Over EIGRP/RIP?
+>   * Cause?: OSPF administrative distance is higher
+>   * Fix: lower OSPF AD with distance ospf command if desired, or set route filtering/policy to prefer OSPF routes
+> * Backbone Area (Area 0) Not Connected?
+>   * Cause?: Area 0 discontinuity or misconfiguration of ABR
+>   * Fix: ensure all areas are connected directly to Area 0 or use a virtual-link, use show ip ospf and show ip ospf border-routers to verify ABR presence
+> * External Routes (E1/E2) Not Behaving as Expected?
+>   * Cause?: route type mismatch in redistribution
+>   * Fix: use redistribute [protocol] metric-type 1 to ensure routes prefer lowest cost path + internal cost, check E1 vs E2 behavior with show ip route (E1 includes internal cost, E2 does not)
 ---
-
 ### Insights:
 > * If adjacency is stuck in Init or Down, ensure both sides have the same timers
 > * Routers in different areas in the same subnet won't form adjacencies
@@ -198,7 +226,6 @@ Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a c
 > * Stub, totally stubby and NSSA provide route-filtering strategies
 > * Neighbors must be in the same area to form adjacency
 ---
-
 ### Commands:
 > *
 ---
