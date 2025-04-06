@@ -107,10 +107,7 @@
 >   * 2 - AuType (0 = no auth, 1 = plain-text, 2 = MD5 or cryptographic)  
 >   * 8 - Authentication (password, MD5 or zeroed)  
 *OSPFv3 for IPv6 auth is handled differently*  
-
-```
-OSPF Common Header Definitions:
-```
+#### OSPF Common Header Definitions:
 
 #### OSPF Hello Packet (Type 1) = 
 Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networks and ensure two-way communication; maintains adjacencies
