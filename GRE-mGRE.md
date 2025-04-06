@@ -32,6 +32,24 @@
 ### mGRE Operational Overview: 
 > * With mGRE, a single tunnel interface is configured to accept GRE encapsulated packets from multiple remote endpoints. The router uses additional mechanisms (like NHRP) to dynamically determine which remote endpoint to use for a given traffic flow.
 ---
+### Connecting Two Private Networks Over The Internet:
+> * Criteria:
+>   * Tunnel source and destination must be specified as an IP address or interface number (but they cannot be identical)
+>   * The physical interfaces (or loopback) must not be in the same subnet (could cause a loop)
+>   * The IP address assigned to the tunnel interfaces must be in the same subnet (dynamic routing protocols expect adjacent interfaces to be on the same subnet)
+>   * A route to the tunnel destination must exist on the local router
+>   ** The interface state must be up/up
+
+1. GRE tunnels encapsulate private IP packets within public IP headers. This allows two private networks to communicate over the public internet.  
+2. The tunnel source and destination IP addresses must be publicly routable so that intermediate routers can deliver packets between two tunnel endpoints. Usually, these are the public IPs of the routers (like ISP-facing interfaces).  
+3. GRE supports multicast, broadcast and non-IP protocols, which makes it ideal for routing protocols (like OSPF, EIGRP) to run across the tunnel.  
+4. GRE does not provide encryption, authentication or integrity by itself. For secure transmission, GRE is often combined with IPsec (used in DMVPN Phase 3, for example).  
+5. GRE uses IP protocol number 47 (not TCP or UDP) in the IP header. This is important for ACLs, NAT, and firewall configuration.  
+6. GRE is stateless, there is no inherit keepalive, unless configured manually (or via extensions like NHRP in mGRE/DMVPN).
+7. GRE adds overhead (24 bytes typically), so MSS/MTU tuning may be needed to avoid fragmentation over the Internet.  
+8. Both ends need proper tunnel source and tunnel destination IP configured to bring up the tunnel.  
+9. GRE can carry traffic between overlapping private subnets, but NAT or VRF separation may be required depending on topology.  
+---
 ### Header Breakdown: 4 to 8 bytes
 > * 16 - Flags and Versions
 > * 16 - Protocol Type (0x0800 for IPv4, 0x86DD for IPv6)
