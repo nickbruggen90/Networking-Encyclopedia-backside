@@ -39,6 +39,7 @@
 >   * The IP address assigned to the tunnel interfaces must be in the same subnet (dynamic routing protocols expect adjacent interfaces to be on the same subnet)
 >   * A route to the tunnel destination must exist on the local router
 >   * The interface state must be up/up
+>   * Tunnel interfaces are locally significant
 
 > 1. GRE tunnels encapsulate private IP packets within public IP headers. This allows two private networks to communicate over the public internet.  
 > 2. The tunnel source and destination IP addresses must be publicly routable so that intermediate routers can deliver packets between two tunnel endpoints. Usually, these are the public IPs of the routers (like ISP-facing interfaces).  
