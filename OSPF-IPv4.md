@@ -56,7 +56,7 @@
 ---
 ### Network Types:
 > * Broadcast (Ethernet) – elects DR/BDR to reduce flooding; all other routers are DROTHER
-> * NBMA (frame relay) – ????
+> * NBMA (frame relay) – refers to network segments that allow multiple devices to communicate over a shared infrastructure but do no support native broadcast or multicast traffic
 > * Point-to-Point – no DR/BDR needed; simplified adjacency, one neighbor per interface; uses Type 1 LSA; does not appear as a separate LSA in the LSDB, it is recorded as a direct connection between two routers
 > * Point-to-Multipoint – treats each subinterface as a separate adjacency, no DR/DBR on each link
 > * Loopback – OSPF sees loopbacks as a stub host unless configured otherwise
