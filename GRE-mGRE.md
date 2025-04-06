@@ -70,7 +70,7 @@
 > * Protocol Transport – GRE can encapsulate non-IP protocols or multicast traffic, making it useful in specialized scenarios
 > * Overlay Networks – GRE/mGRE can form the basis of an overlay network, decoupling the data plane from the physical infrastructure
 ---
-### Best Practices/Security Consideration:
+### Best Practices/Security Considerations:
 > * GRE does not provide encryption or authentication by itself. To secure GRE tunnels, combine with IPsec or similar security protocols
 > * If using tunnel keys, ensure they are consistently configured to prevent unauthorized tunnel establishment
 > * Limit management access to tunnel interfaces via ACLs and secure management protocols
