@@ -108,7 +108,7 @@
 >   * 8 - Authentication (password, MD5 or zeroed)  
 *OSPFv3 for IPv6 auth is handled differently*  
 #### OSPF Common Header Definitions:
-
+---
 #### OSPF Hello Packet (Type 1) = 
 Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networks and ensure two-way communication; maintains adjacencies
 > * | Common Header | Network Mask | Hello Int | Options | Router Prio. | Dead Int | DR | BDR | Neighbor ID |
@@ -122,12 +122,9 @@ Purpose: Hello packets discover neighbors, elect DR/BDR on broadcast/NBMA networ
 >   * 4 - DR (IP of current DR on segment; 0.0.0.0 if none)
 >   * 4 - BDR (IP of current DBR; 0.0.0.0 if none)
 >   * variable - Neighbor IDs
-
-```
-OSPF Hello Packet (Type 1) Header Definitions:
+#### OSPF Hello Packet (Type 1) Header Definitions:
 > * Neighbor IDs – list of RIDs from which Hellos have been seen on this interface within the Dead interval
-```
-
+---
 #### OSPF DBD Packet (Type 2) = 
 Purpse: DBD packets provide a high-level summary of each LSA so neighbors can check what they have or are missing. Summaries of LSDB content to compare databases.
 > * | Common Header | Interface MTU | Options | DBD | DD Sequence Number | LSA Headers |
@@ -139,13 +136,10 @@ Purpse: DBD packets provide a high-level summary of each LSA so neighbors can ch
 >     * MS (master/slave) - indicates M/S			 
 >   * 4 - DD Sequence Number
 >   * variable - LSA Headers  
-
-```
-OSPF DBD Packet (Type 2) Header Definitions:
+#### OSPF DBD Packet (Type 2) Header Definitions:
 > * DBD Sequence Number - sequence number for the master/slave relationship to ensure DBD packets are processed in the correct order; maintained by Master
 > * LSA Headers - a list of LSA headers that describe what is in the routers LSBD
-```
-
+---
 #### OSPF LSR Packet (Type 3) =
 Purpose: A neighbor uses LSR to ask for specific details of LSAs that it has determined missing or out of date. Requests missing or newer LSAs.
 > * |  Common Header | LSA Requests |
@@ -153,40 +147,30 @@ Purpose: A neighbor uses LSR to ask for specific details of LSAs that it has det
 >   * 4 - LSA Type
 >   * 4 - LS ID
 >   * 4 - Advertising Router
-
-```
-OSPF LSR Packet (Type 3) Definitions:
+#### OSPF LSR Packet (Type 3) Definitions:
 > * LSA Requests –  one or more entries, each specifying an LS Type, LS ID and Advertising Router that the router wants from its neighbor
 > * LSA Type – ????
 > * Link State ID – ????
 > * Advertising Router – RID of who originated the LSA
-```
-
+---
 #### OSPF LSU Packet (Type 4) = 
 Purpose: Flood updated link-state info to neighbors when topology changes or in response to LSRs. The actual LSAs being sent out/flooded.
 > * | Common Header | Number of LSAs | LSAs |
 >   * 4 - Number of LSAs
 >   * variable - LSAs
-
-```
-OSPF LSU Packet (Type 4) Definitions:
+#### OSPF LSU Packet (Type 4) Definitions:
 > * Number of LSAs –  how many LSAs are in the packet
 > * LSAs – each LSA includes the 20-byte header + body fields
-```
-
+---
 #### OSPF LSAck Packet (Type 5) = 
 Purpose: Ensures reliability of LSA flooding. If no LSAck is received within a certain time, the LSU is retransmitted. Acknowledgement to confirm LSUs were received.
 > * | Common Header | Number of LSAs | LSA Headers |
 >   * 4 - Number of LSAs
 >   * variable - LSA Headers
-
-```
-OSPF LSAck Packet (Type 5) Definitions:
+#### OSPF LSAck Packet (Type 5) Definitions:
 > * Number of LSAs – how many LSAs are being acknowledged
 > * LSA Headers – contains the headers of each LSA that are being acknowledged
-```
 ---
-
 ### Best Practices:
 > * Limit number of routes per area (<50 for stability)
 > * Check for network type mismatch
