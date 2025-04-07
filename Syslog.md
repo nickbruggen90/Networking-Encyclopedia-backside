@@ -65,6 +65,9 @@
 > * No Logs Sent Over TLS?
 >   * Cause?: missing trust relationship or unsupported version
 >   * Fix: use valid X.509 certs, verify transport tcp port 6514 and TLC setup
+> * Severity Filtering Misconfigured?
+>   * Cause?: severity level on device us set too high or low
+>   * Fix: use logging trap informational to adjust what’s sent
 ---
 ### Insights:
 > * In traditional SysLog servers, you can configure the device to send logs using a specific facility so you can filter or categorize them more easily on the server side
