@@ -9,7 +9,7 @@
 > * Log Message Rate-Limiting – some devices support rate-limiting to control how many messages are sent per second to prevent overloading the collector or the control plane
 > * Buffered Logging Flush Timers – when logging to a buffer or file, messages may be flushed periodically based on system defined intervals
 > * Time Stamps – syslog messages can include timestamps (either local system time or synchronized via NTP). Ensure NTP is enabled and accurate across the network for proper correlation
-> * Heartbeat Messages – in certain implementations (like syslog-ng or rsyslog), you can configure periodic status updates or heartbeats
+> * Heartbeat Messages – in certain implementations (like syslog-ng or rsyslog), you can configure periodic status updates or heartbeats to verify connection or status between cient and server
 ---
 ### Multicast:
 > * Syslog is unicast-based by default. Syslog messages are always sent directly to the device.
