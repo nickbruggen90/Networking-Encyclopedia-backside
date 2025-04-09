@@ -19,7 +19,7 @@
 ### Operations:
 > 1. Internal host sends packet to the Internet
 > 2. The router replaces the source IP and source port with its own public IP and a unique port
-> 3. Entry is created in the NAT translation table
+> 3. Entry is created in the NAT translation table, mapping the Inside Local IP:Port to Inside Global IP:Port
 > 4. When return traffic comes in, the router references the table to forward packets to the correct internal host and port
 ---
 ### Key Benefits:
