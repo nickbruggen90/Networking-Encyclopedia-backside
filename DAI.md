@@ -6,6 +6,9 @@
 > * DAI helps ensure that only legitimate ARP responses are allowed, protecting the network from man in the middle attacks and other ARP based threats
 > * DAI is a vital component in protecting the network at the L2 level, significantly reducing the risk of ARP-based attacks.
 ---
+### Timers:
+> * DAI is event-driven
+---
 ### Terminology/Definitions:
 > * ARP – a protocol used to map an IP address to a MAC address on a local network
 > * ARP Spoofing/Poisoning – a technique in which an attacker sends falsified ARP messages to a network, associating their MAC address with the IP address of another device (usually a gateway) to intercept or manipulate traffic
