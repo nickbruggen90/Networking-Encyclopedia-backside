@@ -1,4 +1,4 @@
-#DAI - Cisco proprietary
+# DAI - Cisco proprietary
 
 ### Overview:
 > * DAI is a security feature used on Cisco switches to prevent ARP spoofing and poisoning attacks.
