@@ -19,10 +19,10 @@
 ---
 ### Virtual MAC:
 > * HSRPv1 MAC = 00:00:0C:07:AC(XX) – XX represents the group number in hex
->   * 	*group range = 0 - 255*
+>   * *group range = 0 - 255*
 > * HSRPv2 MAC = 00:00:0C:9F:F(XXX) – XXX represent the group number in hex
-> *   *group range = 0 - 4095*
-*Group numbers are local to the interface; they can be reused on different interfaces
+>   * *group range = 0 - 4095*
+>   * *Group numbers are local to the interface; they can be reused on different interfaces
 ---
 ### Protocol/Port(s):
 > * UDP: 1985
