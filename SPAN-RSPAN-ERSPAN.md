@@ -2,7 +2,7 @@
 
 ### Overview: 
 > * Monitors and analyzes network traffic; essential for troubleshooting, security and performance tuning
---
+---
 ### Timers: 
 > * No timers by default; session configurations and timeouts are platform specific or configurable. Standard VLAN and MAC table aging apply.
 ---
