@@ -4,7 +4,11 @@ VXLAN - RFC 7348
 > * VXLAN is an overlay networking technology designed to address scalability and segmentation challenges in large data center or cloud environments
 > * VXLAN encapsulates L3 Ethernet frames with UDP packets, allowing the extension of L2 networks over a L3 infrastructure. This enables the creation of logical (virtual) networks that can span across data centers and remote locations
 > * Integrates with modern automation and SDN frameworks
---
+---
+### Timers:
+> * VXLAN itself is event-driven and does not rely on specific timers. When used with BGP EVPN, standard BGP timers apply (Keepalive, Holdtime, etc)
+> * Data plane behavior (MAC aging, etc) follows normal L2 mechanisms within the VTEP
+---
 ### Protocol/Port(s): 
 > * UDP - 4789 (destination port)
 ---
