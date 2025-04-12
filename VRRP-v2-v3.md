@@ -1,4 +1,4 @@
-VRRPv2, v3 - RFC: 3768 (for v2), RFC: 5798 (for v3)
+# VRRPv2, v3 - RFC: 3768 (for v2), RFC: 5798 (for v3)
 
 ### Overview:
 > * Open standard; provides high availability for default gateway functionality
