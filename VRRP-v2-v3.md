@@ -58,9 +58,9 @@
 > * variable - one or more VIPs
 ---
 #### Header Definitions:
-> * Type: only 1 type exists; Advertisement
-> * Count IP Address: number of VIP’s included in a VRRP packet(typically 1)
-> * Authentication Type: not used in modern VRRP
+> * Type - only 1 type exists; Advertisement
+> * Count IP Address - number of VIP’s included in a VRRP packet(typically 1)
+> * Authentication Type - not used in modern VRRP; obsolete in IPv6. IPv6 uses external security measures like IPsec or control plane isolation
 ---
 ### Best Practices/Security Considerations:
 > * v3 is backward compatible with IPv4; but you should run one version on a single interface.
@@ -97,6 +97,7 @@
 > * VRRPs behavior is deterministic due to priority + IP tie-breakers
 > * Most platforms support interface tracking, which is crucial for dynamic failover
 > * VRRP is often used in multi-vendor or MPLS deployments due to open standardization
+> * VRRP supports multiple VIPs per interface (though uncommon), which is useful for segmented gateway services
 ---
 ### Commands:
 > *
