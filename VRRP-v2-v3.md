@@ -6,7 +6,7 @@ VRRPv2, v3 - RFC: 3768 (for v2), RFC: 5798 (for v3)
 > * Only one router can be a Master a time; the rest are backups monitoring the Master
 > * VRRPv3 relies on IP Sec if needed
 > * VRRPv2 is enabled directly on the interface; while VRRPv3 is done globally first, then interface second
-> * 	*You need to specify whether your enabling IPv4/IPv6 or both globally, doing so provides 	  clarity in dual-stack environments*
+> * *You need to specify whether your enabling IPv4/IPv6 or both globally, doing so provides 	  clarity in dual-stack environments*
 ---
 ### Timers:
 > * Advertisement Interval = 1 sec
