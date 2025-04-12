@@ -79,7 +79,7 @@
 > * RSPAN allows centralized monitoring across a campus LAN by using a dedicated VLAN for mirror traffic
 > * ERSPAN extends the reach further by encapsulating mirror traffic for transport over routed networks, making it suitable for geographically dispersed networks or remote troubleshooting
 > * Mirror sessions can introduce extra load on the network; it is important to plan mirror sessions during off-peak hours or use filtering to limit unnecessary traffic
-> * Mirrored traffic often contains sensitive sata; ensure that access to SPAN/RSPAN/ERSPAN sessions is tightly controlled and monitored
+> * Mirrored traffic often contains sensitive data; ensure that access to SPAN/RSPAN/ERSPAN sessions is tightly controlled and monitored
 > * Use filters and specific sessions definitions to capture only relevant traffic
 ---
 ### Commands:
