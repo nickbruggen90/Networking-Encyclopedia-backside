@@ -31,13 +31,13 @@ VXLAN - RFC 7348
 ---
 ### Header Breakdown: 
 ```
-+----------------------------+
-| Outer Ethernet          |
-| Outer IP Header        |  → Source = local VTEP | Destination = remote VTEP
-| UDP Header              |  → Destination Port = 4789
-| VXLAN Header (8B)  |
-| Original Ethernet        |
-+---------------------------+
++---------------------+
+| Outer Ethernet      |
+| Outer IP Header     |  → Source = local VTEP | Destination = remote VTEP
+| UDP Header          |  → Destination Port = 4789
+| VXLAN Header (8B)   |
+| Original Ethernet   |
++---------------------+
 ```
 > * VXLAN encapsulation adds several layers to the original Ethernet frame –
 >   * Original Ethernet frame
