@@ -23,13 +23,22 @@ VXLAN - RFC 7348
 ### Architecture/Conceptual Overview:
 > * VTEP Functionality –
 >   * Encapsulating: Ethernet frames from local VXLAN segment by adding a VXLAN header, UDP header and IP header
->   * Decapsulation: incoming VXLAN packets to extract the original Ethernet frame and delivery it to the appropriate endpoint
+>   * Decapsulation: incoming VXLAN packets to extract the original Ethernet frame and deliver it to the appropriate endpoint
 > * Underlay Network – the underlay is typically a standard IP network that provides connectivity between VTEPs
 > * Control Plane (optional) –
 >   * Flood-and-Learn: in basic VXLAN deployments, a data plane mechanism (flood-and-learn) is used to build MAC address tables
 >   * BGP EVPN: for scalable and efficient environments, VXLAN often uses BGP EVPN as the control plane to advertise MAC/IP/VTEP mappings and avoid unnecessary flooding
 ---
 ### Header Breakdown: 
+```
++----------------------------+
+| Outer Ethernet          |
+| Outer IP Header        |  → Source = local VTEP | Destination = remote VTEP
+| UDP Header              |  → Destination Port = 4789
+| VXLAN Header (8B)  |
+| Original Ethernet        |
++---------------------------+
+```
 > * VXLAN encapsulation adds several layers to the original Ethernet frame –
 >   * Original Ethernet frame
 >   * 8 - VXLAN Header
@@ -57,7 +66,7 @@ VXLAN - RFC 7348
 ### Best Practices/Security Considerations:
 > * Ensure that VNIs are uniformly configured across all VTEPs
 > * Optimize the underlay network for low latency and high reliability, as it directly impacts VXLAN performance
-> * Secure both the control and data plants using proper authentication, encryption and ACLs
+> * Secure both the control and data planes using proper authentication, encryption and ACLs
 > * Regularly monitor NVE interfaces, BGP EVPN sessions and VXLAN forwarding tables. Use built-in verification commands and logging to identify issues early
 > * Maintain thorough documentation of VXLAN configuration and consider automating deployment and monitoring with tools like Cisco DNA Center or custom scripts
 > * VXLAN encapsulation does not inherently encrypt traffic. To secure sensitive data integrate IPsec or MACsec on the underlay network
