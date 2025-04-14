@@ -113,6 +113,6 @@
 ### Use Cases:
 > * Configuration Management (Ansible, Python, Terraform)
 > * State Monitoring (interface status, BGP neighbors, etc)
-> * Zero-Touch Provisioning (combined with DHCP/PnP and automation hooks)
+> * (ZTP) Zero-Touch Provisioning (combined with DHCP/PnP and automation hooks)
 > * Closed-Loop Automation (monitor-change-trigger-update workflows)
 > * Third-Party API Integration (SDN, DNAC, NSO, NSX)
