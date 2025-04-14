@@ -12,6 +12,9 @@
 ### Terminology/Definitions:
 > * YANG – data modeling language used to define schema for configuration/state data
 > * Datastore – logical container for configuration/state (running, startup, candidate)
+>   * running – current active config
+>   * candidate – staging area (NETCONF only)
+>   * startup – saved to non-volatile memory
 > * RPC (NETCONF) – remote procedure call, XML encoded command used for configuration and queries
 > * REST URI (RESTCONF) – REST-style paths to YANG-defined resources
 > * Capabilities – advertised features and module support presented at sessions establishment (NETCONF)
