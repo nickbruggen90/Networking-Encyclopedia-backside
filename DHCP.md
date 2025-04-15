@@ -52,22 +52,62 @@ ___
 ---
 ### DHCP Options:
 > * Option 1 = subnet mask
+> * Option 2 = time offset
 > * Option 3 = default gateway (router)
+> * Option 4 = time server
+> * Option 5 = name server
 > * Option 6 = DNS server(s)
+> * Option 7 = log server
+> * Option 8 = cookie server
+> * Option 9 = LPR server
 > * Option 12 = clients hostname
+> * Option 13 = boot file size
 > * Option 15 = domain name
+> * Option 16 = swap server
+> * Option 17 = root path
+> * Option 18 = extensions path
+> * Option 19 = IP forwarding
+> * Option 20 = non-local source routing
+> * Option 21 = policy filter
+> * Option 22 = max datagram reassembly size
 > * Option 23 = default TTL for IP packet
 > * Option 24 = timeout for discovering path MTU
 > * Option 25 = list of MTU sizes to use in path MTU discovery
 > * Option 26 = specifics the MTU of the interface
+> * Option 27 = all subnets local
 > * Option 28 = broadcast address on the subnet
+> * Option 29 = perform mask discovery
+> * Option 30 = mask supplier
+> * Option 31 = perform router discovery
+> * Option 32 = router solicitation address
+> * Option 33 = static route
+> * Option 34 = trailer encapsulation
+> * Option 35 = ARP cache timeout
+> * Option 36 = Ethernet encapsulation
+> * Option 37 = default TCP TTL
+> * Option 38 = TCP keepalive interval
+> * Option 39 = TCP keepalive garbage
+> * Option 40 = network information service domain
+> * Option 41 = NIS server
 > * Option 42 = NTP server IPs
+> * Option 43 = Vendor-specific Information (Cisco WLC, Aruba, etc)
+> * Option 44 = NetBIOS name server (WINS)
+> * Option 45 = NetBIOS datagram distribution server
+> * Option 46 = NetBIOS node type
+> * Option 47 = NetBIOS scope
+> * Option 48 = X Window system font server
+> * Option 49 = X Window system display manager
 > * Option 50 = IP the client requests (used in DHCPREQUEST)
 > * Option 51 = IP address lease time in seconds
+> * Option 52 = option overload
 > * Option 53 = DHCP message type
 > * Option 54 = server identifier
 > * Option 56 = text message from the server to client
 > * Option 57 = max size of a DHCP message a client can accept
+> * Option 58 = renewal (T1) time value
+> * Option 59 = rebinding (T2) time value
+> * Option 60 = Vendor Class Identifier (PXEClient, MSFT 5.0, etc)
+> * Option 61 = client identifier
 > * Option 66 = TFTP server name (commonly used for IP phone or device provisioning)
 > * Option 67 = bootfile name (PXE boot or phone configuration)
 > * Option 69 = SMTP server
@@ -76,9 +116,23 @@ ___
 > * Option 72 = WWW server
 > * Option 73 = finger server
 > * Option 74 = IRC server
+> * Option 77 = user class
 > * Option 81 = client FQDN
+> * Option 82 = relay agent information
 > * Option 90 = LDAP server
+> * Option 119 = domain search list
+> * Option 120 = SIP servers
+> * Option 121 = classless static routes (RFC 3442)
+> * Option 125 = vendor-identifying vendor class
 > * Option 150 = TFTP server (Cisco)
+---
+### TLV:
+> * Every DHCP option = TLV
+> * Option 43 = TLV that contains sub-TLVs
+> * Cisco’s WLC use of Option 43 sub-TLV follows:
+>   * Type: F1 (WLC-specific)
+>   * Length: total bytes for all controller IPs
+>   * Value: controller IP(s) in hex
 ---
 ### Header Breakdown:
 > * DHCP IPv4 =
