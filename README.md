@@ -11,6 +11,19 @@ To create a personal knowledge base that:
 > * Grows into a public portfolio showcasing technical depth and clarity
 
 ---
+## Index
+Networking-Encyclopedia/
+│
+├── 01_Layer2
+├── 02_Layer3
+├── 03_NAT-DHCP-ACLs/
+├── 04_HighAvailability
+├── 05_Multicast/
+├── 06_Netconf-Restconf/
+├── 07_Python_Automation/
+│
+└── README.md
+---
 -[Substack: Vol802.1Q]  
 -[LinkedIn](http://linkedin.com/nickbruggen90)  
 -nickbruggen90@gmail.com  
