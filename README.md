@@ -21,6 +21,7 @@ Networking-Encyclopedia/
 ├── 05_Multicast/  
 ├── 06_Netconf-Restconf/  
 ├── 07_Python_Automation/  
+├── 08_Interstellar_CCNP_Lab/
 │  
 └── README.md  
 
