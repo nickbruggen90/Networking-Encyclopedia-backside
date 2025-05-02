@@ -11,6 +11,6 @@ To create a personal knowledge base that:
 > * Grows into a public portfolio showcasing technical depth and clarity
 
 ---
--[Substack: Vol802.1Q]
--[LinkedIn](http://linkedin.com/nickbruggen90)
--nickbruggen90@gmail.com
+-[Substack: Vol802.1Q]  
+-[LinkedIn](http://linkedin.com/nickbruggen90)  
+-nickbruggen90@gmail.com  
