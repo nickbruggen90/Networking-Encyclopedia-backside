@@ -12,17 +12,17 @@ To create a personal knowledge base that:
 
 ---
 ## Index
-Networking-Encyclopedia/
-│
-├── 01_Layer2
-├── 02_Layer3
-├── 03_NAT-DHCP-ACLs/
-├── 04_HighAvailability
-├── 05_Multicast/
-├── 06_Netconf-Restconf/
-├── 07_Python_Automation/
-│
-└── README.md
+Networking-Encyclopedia/  
+│  
+├── 01_Layer2  
+├── 02_Layer3  
+├── 03_NAT-DHCP-ACLs/  
+├── 04_HighAvailability  
+├── 05_Multicast/  
+├── 06_Netconf-Restconf/  
+├── 07_Python_Automation/  
+│  
+└── README.md  
 
 ---
 -[Substack: Vol802.1Q]  
