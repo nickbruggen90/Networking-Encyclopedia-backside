@@ -33,8 +33,3 @@ This is **not** a generic notes repo. It’s my full-stack network reference for
 | **[Encyclopedia Index](./Index.md)** | Full alphabetical listing and search index (WIP) |
 
 ---
-
----
--[Substack: Vol802.1Q]  
--[LinkedIn](http://linkedin.com/nickbruggen90)  
--nickbruggen90@gmail.com  
