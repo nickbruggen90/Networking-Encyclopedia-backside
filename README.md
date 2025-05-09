@@ -1,5 +1,5 @@
-# 📚Networking Encyclopedia: Vol. 802.1Q
-Welcome to *Vol. 802.1Q* - a comprehensive, vendor neutral reference manual for all things networking.  
+# 📚Encyclopedia: Vol. 802.1Q
+Welcome to *Encyclopedia Vol. 802.1Q* - a comprehensive, vendor neutral reference manual for all things networking.  
 *A living reference for mastering protocols, topologies, and real-world networking design*
 
 ---
