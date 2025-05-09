@@ -1,14 +1,19 @@
 # 📚Networking Encyclopedia: Vol. 802.1Q
 Welcome to *Vol. 802.1Q* - a comprehensive, vendor neutral reference manual for all things networking.  
-This is a long-term project designed to document and explore enterprise-level networking topics, certifications, labs, and automation.
+*A living reference for mastering protocols, topologies, and real-world networking design*
 
 ---
-## Purpose
-To create a personal knowledge base that:
-> * Reinforces core concepts through lab work and documentation
-> * Bridges theory with real-world configuration and troubleshooting
-> * Supports certification prep
-> * Grows into a public portfolio showcasing technical depth and clarity
+
+## 🧭 About This Project
+
+**Vol. 802.1Q** is an ongoing encyclopedia-style manual of everything I’m learning about networking — from Cisco CCNP to multivendor, from routing to automation. It's designed for deep study, long-term retention, and practical, production-ready knowledge.
+
+You’ll find detailed breakdowns, RFC references, command syntax, use cases, troubleshooting tips, and comparisons — organized by protocol and technology.
+
+This is **not** a generic notes repo. It’s my full-stack network reference for real life and the CCNP/CCIE path.
+
+---
+
 
 ---
 ## Index
