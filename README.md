@@ -16,7 +16,7 @@ This is **not** a generic notes repo. It’s my full-stack network reference for
 
 
 ---
-## Index
+## Contents
 
 | Section | Description |
 |--------|-------------|
