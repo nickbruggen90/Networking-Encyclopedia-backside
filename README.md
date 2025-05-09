@@ -10,7 +10,7 @@ Welcome to *Vol. 802.1Q* - a comprehensive, vendor neutral reference manual for 
 
 You’ll find detailed breakdowns, RFC references, command syntax, use cases, troubleshooting tips, and comparisons — organized by protocol and technology.
 
-This is **not** a generic notes repo. It’s my full-stack network reference for real life and the CCNP/CCIE path.
+This is **not** a generic notes repo. It’s my full-stack network reference for real life and the CCNP/CCIE path and beyond.
 
 ---
 
