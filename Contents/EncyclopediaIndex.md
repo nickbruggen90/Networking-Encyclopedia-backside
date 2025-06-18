@@ -44,8 +44,7 @@
 
 ## F
 - [Field Notes](#)
-- [Flexible NetFlow (FNF)](#)
-- [Flow Control](#)
+- [Flexible NetFlow (FNF)/NetFlow](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/NetFlow-FNF.md)
 
 ## G
 - [GETVPN] - work in progress
