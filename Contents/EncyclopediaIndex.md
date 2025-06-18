@@ -4,6 +4,8 @@
 
 ## other
 - [3 Planes](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/CoreConcepts/3Planes-Control-Data-Management.md)
+- [802.1Q/Trunking/VLANs] - work in progress
+- [802.1X] - work in progress
 
 ## A
 - [AAA](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/AAA.md)
@@ -15,11 +17,14 @@
 - [Automation](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Automation/Automation.md)
 
 ## B
+- [BFD] - work in progress
 - [BGP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/BGP-IPv4-IPv6.md)
-- [Behind the Desk Insights](#)
+- [Behind the Desk Insights] - work in progress
 
 ## C
 - [CEF (Cisco Express Forwarding)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/CEF.md)
+- [Cisco Firewalls] - work in progress
+- [Cisco FirePower NGFW] - work in progress
 - [CoPP (Control Plane Policing)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/CoPP.md)
 - [Control Plane](#)
 - [Core Concepts](#)
@@ -28,13 +33,14 @@
 - [DAI (Dynamic ARP Inspection)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DAI.md)
 - [DHCP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/DHCP.md)
 - [DHCP Snooping](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DHCP-Snooping.md)
+- [DHCPv6] - work in progress
 - [DTLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DTLS.md)
 - [DTP (Dynamic Trunking Protocol)](#)
 - [DMVPN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DMVPN.md)
 
 ## E
-- [EIGRP](#)
-- [EtherChannel](#)
+- [EIGRP] - work in progress
+- [EtherChannel] - work in progress
 
 ## F
 - [Field Notes](#)
@@ -42,21 +48,31 @@
 - [Flow Control](#)
 
 ## G
-- [GLBP](#)
+- [GETVPN] - work in progress
+- [GLBP] - work in progress
 - [GRE / mGRE](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/GRE-mGRE.md)
-- [gNMI](#)
+- [gRPC] - work in progress
+- [gNMI] - work in progress
 
 ## H
 - [HSRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/HSRP-v1-v2.md)
+- [HTTP Status Codes] - work in progress
 
 ## I
+- [iACL] - work in progress
 - [ICMP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/PacketAnalysis/ICMPv4-ICMPv6.md)
+- [IGMP] - work in progress
 - [IP SLA](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/IP-SLA.md)
-- [IP Services](#)
-- [IPv6](#)
+- [IP Source Guard] - work in progress
+- [IPsec] - work in progress
+- [IPSG] - work in progress
+- [ISE]
+- [IPv4 CIDR Chart] - work in progress
+- [IPv4 Fundamentals] - work in progress
+- [IPv6 Fundamentals] - work in progress
 
 ## L
-- [LACP](#)
+- [LACP/802.3ad, 802.1AX] - work in progress
 - [Layer 2 Overview](#)
 - [Layer 3 Overview](#)
 - [Layer 4 Overview](#)
@@ -67,30 +83,37 @@
 - [MACsec](#)
 - [Management Plane](#)
 - [MPLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/MPLS.md)
+- [MPP] - work in progress
 - [Multicast MAC Reference](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/tree/main/Contents/Layer2)
-- [MSTP](#)
+- [MSDP] - work in progress
+- [MSTP/802.1s] - work in progress
 
 ## N
-- [Naming Conventions](#)
-- [NAT](#)
+- [Naming Conventions] - work in progress
+- [NAT] - work in progress
+- [NAC] - work in progress
 - [NETCONF/RESTCONF](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/NETCONF-RESTCONF.md)
 - [NetFlow](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/NetFlow-FNF.md)
-- [Netmiko](#)
-- [Network Security](#)
-- [Network Management](#)
+- [Netmiko] - work in progress
+- [NHRP] - work in progress
 - [NTP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/NTP.md)
 
 ## O
+- [OMP] - work in progress
 - [OSPF](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/OSPF-IPv4.md)
+- [OSPFv3] - work in progress
 - [Overlay Technologies](#)
 
 ## P
-- [Packet Analysis](#)
+- [Packet Analysis/WireShark] - work in progress
 - [PAgP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/PAgP.md)
 - [PAT](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/PAT.md)
-- [PBR (Policy-Based Routing)](#)
-- [Port Numbers](#)
-- [Python](#)
+- [PBR (Policy-Based Routing)] - work in progress
+- [PIM] - work in progress
+- [PNAC] - work in progress
+- [Port Numbers] - work in progress
+- [Port Security] - work in progress
+- [Python] - work in progress
 
 ## Q
 - [QoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
@@ -103,10 +126,12 @@
 - [Redundancy Terminology](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/Redundancy-Terms.md)
 - [RF Planning](#)
 - [Roaming](#)
+- [Routing Overview] - work in progress
 - [RSTP](#)
 - [Routing Protocols](#)
 
 ## S
+- [Scripting Fundamentals] - work in progress
 - [SD-Access](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/SD-Access.md)
 - [SD-WAN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/SD-WAN.md)
 - [Site Surveys](#)
@@ -119,28 +144,27 @@
 
 ## T
 - [Telemetry](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/Telemetry.md)
-- [TCP](#)
-- [TTL](#)
-- [Traffic Engineering](#)
-- [TraceNG](#)
-- [Trunking](#)
+- [Trunking/VLAN/802.1Q] - work in progress
+- [TrustSec] - work in progress
 
 ## U
 - [UDP](#)
+- [uRPF] - work in progress
 
 ## V
-- [VLANs](#)
+- [VLANs/Trunking/802.1Q](#)
 - [Virtualization](https://github.com/nickbruggen90/Networking-Encyclopedia backside/blob/main/Contents/AdvancedTopics/Virtualization.md)
-- [VRF](#)
+- [VRF/VRF Lite] - work in progress
 - [VRRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/VRRP-v2-v3.md)
+- [VTP] - work in progress
 - [VXLAN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/VXLAN.md)
 
 ## W
-- [Wi-Fi Standards (802.11)](#)
-- [WLC Architecture](#)
+- [Wi-Fi Standards] - work in progress
 - [Wireless Overview](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Wireless/Wireless-Overview.md)
-- [Wireless QoS](#)
-- [Wireshark](#)
+- [Wireshark/Packet Analysis] - work in progress
+
+## X
+= [X.509] - work in progress
 
 ## Z
-- [Zero Trust](#)
