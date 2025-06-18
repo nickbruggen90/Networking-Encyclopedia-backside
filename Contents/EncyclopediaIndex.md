@@ -9,9 +9,9 @@
 - [AAA](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/AAA.md)
 - [ACL Overview](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/ACL-overview.md)
 - [ACL MAC](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/ACL-MAC.md)
-- [Advanced Routing Techniques](WiP)
-- [Ansible](WiP)
-- [ARP](WiP)
+- [Advanced Routing Techniques] - work in progress
+- [Ansible] - work in progress
+- [ARP] - work in progress
 - [Automation](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Automation/Automation.md)
 
 ## B
