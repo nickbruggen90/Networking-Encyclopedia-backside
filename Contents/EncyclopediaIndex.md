@@ -26,8 +26,6 @@
 - [Cisco Firewalls] - work in progress
 - [Cisco FirePower NGFW] - work in progress
 - [CoPP (Control Plane Policing)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/CoPP.md)
-- [Control Plane](#)
-- [Core Concepts](#)
 
 ## D
 - [DAI (Dynamic ARP Inspection)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DAI.md)
@@ -65,22 +63,20 @@
 - [IP Source Guard] - work in progress
 - [IPsec] - work in progress
 - [IPSG] - work in progress
-- [ISE]
+- [ISE] - work in progress
 - [IPv4 CIDR Chart] - work in progress
 - [IPv4 Fundamentals] - work in progress
 - [IPv6 Fundamentals] - work in progress
 
 ## L
 - [LACP/802.3ad, 802.1AX] - work in progress
-- [Layer 2 Overview](#)
-- [Layer 3 Overview](#)
-- [Layer 4 Overview](#)
+- [Layer 2 Overview](#) - work in progress
+- [Layer 3 Overview](#) - work in progress
+- [Layer 4 Overview](#) - work in progress
 - [LISP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/LISP.md)
-- [Loopback](#)
 
 ## M
-- [MACsec](#)
-- [Management Plane](#)
+- [MACsec] - work in progress
 - [MPLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/MPLS.md)
 - [MPP] - work in progress
 - [Multicast MAC Reference](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/tree/main/Contents/Layer2)
@@ -101,7 +97,6 @@
 - [OMP] - work in progress
 - [OSPF](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/OSPF-IPv4.md)
 - [OSPFv3] - work in progress
-- [Overlay Technologies](#)
 
 ## P
 - [Packet Analysis/WireShark] - work in progress
@@ -118,27 +113,21 @@
 - [QoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
 
 ## R
-- [Real-World Layer 9](#)
+- [Real-World Layer 9] - work in progress
 - [REST API](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/REST-API.md)
 - [RESTCONF/NETCONF](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/NETCONF-RESTCONF.md)
 - [Redundancy Protocols](#)
 - [Redundancy Terminology](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/Redundancy-Terms.md)
-- [RF Planning](#)
-- [Roaming](#)
 - [Routing Overview] - work in progress
-- [RSTP](#)
-- [Routing Protocols](#)
+- [RSTP] - work in progress
 
 ## S
 - [Scripting Fundamentals] - work in progress
 - [SD-Access](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/SD-Access.md)
 - [SD-WAN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/SD-WAN.md)
-- [Site Surveys](#)
 - [SNMP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/SNMP.md)
 - [SPAN/RSPAN/ERSPAN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/PacketAnalysis/SPAN-RSPAN-ERSPAN.md)
-- [STP](#)
-- [Static Routes](#)
-- [Switchport Modes](#)
+- [STP/802.1D] - work in progress
 - [Syslog](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/Syslog.md)
 
 ## T
@@ -147,11 +136,10 @@
 - [TrustSec] - work in progress
 
 ## U
-- [UDP](#)
 - [uRPF] - work in progress
 
 ## V
-- [VLANs/Trunking/802.1Q](#)
+- [VLANs/Trunking/802.1Q] - work in progress
 - [Virtualization](https://github.com/nickbruggen90/Networking-Encyclopedia backside/blob/main/Contents/AdvancedTopics/Virtualization.md)
 - [VRF/VRF Lite] - work in progress
 - [VRRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/VRRP-v2-v3.md)
