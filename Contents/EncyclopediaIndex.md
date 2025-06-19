@@ -9,6 +9,7 @@
 
 ## A
 - [AAA](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/AAA.md)
+- [ACL IP] - work in progress
 - [ACL Overview](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/ACL-overview.md)
 - [ACL MAC](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/ACL-MAC.md)
 - [Advanced Routing Techniques] - work in progress
@@ -23,11 +24,15 @@
 
 ## C
 - [CEF (Cisco Express Forwarding)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/CEF.md)
+- [Cisco DNA] - work in progress
 - [Cisco Firewalls] - work in progress
 - [Cisco FirePower NGFW] - work in progress
+- [Cisco IBNS] - work in progress
 - [CoPP (Control Plane Policing)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/CoPP.md)
+- [CoS/QoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
 
 ## D
+- [Data Models/YANG] - work in progress
 - [DAI (Dynamic ARP Inspection)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DAI.md)
 - [DHCP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/DHCP.md)
 - [DHCP Snooping](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DHCP-Snooping.md)
@@ -39,6 +44,7 @@
 ## E
 - [EIGRP] - work in progress
 - [EtherChannel] - work in progress
+- [Enterprise Network Design] - work in progress
 
 ## F
 - [Field Notes](#)
@@ -52,6 +58,7 @@
 - [gNMI] - work in progress
 
 ## H
+- [High Availability Techniques] - work in progress
 - [HSRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/HSRP-v1-v2.md)
 - [HTTP Status Codes] - work in progress
 
@@ -59,14 +66,19 @@
 - [iACL] - work in progress
 - [ICMP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/PacketAnalysis/ICMPv4-ICMPv6.md)
 - [IGMP] - work in progress
+- [IPCP] - work in progress
 - [IP SLA](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/IP-SLA.md)
 - [IP Source Guard] - work in progress
 - [IPsec] - work in progress
 - [IPSG] - work in progress
 - [ISE] - work in progress
+- [IS-IS] - work in progress
 - [IPv4 CIDR Chart] - work in progress
 - [IPv4 Fundamentals] - work in progress
 - [IPv6 Fundamentals] - work in progress
+
+## J
+- [JSON] - work in progress
 
 ## L
 - [LACP/802.3ad, 802.1AX] - work in progress
@@ -82,6 +94,7 @@
 - [Multicast MAC Reference](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/tree/main/Contents/Layer2)
 - [MSDP] - work in progress
 - [MSTP/802.1s] - work in progress
+- [MTU/MSS] - work in progress
 
 ## N
 - [Naming Conventions] - work in progress
@@ -107,10 +120,11 @@
 - [PNAC] - work in progress
 - [Port Numbers] - work in progress
 - [Port Security] - work in progress
+- [PTP] - work in progress
 - [Python] - work in progress
 
 ## Q
-- [QoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
+- [QoS/CoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
 
 ## R
 - [Real-World Layer 9] - work in progress
