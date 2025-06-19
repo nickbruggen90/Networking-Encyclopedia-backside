@@ -154,7 +154,7 @@
 
 ## V
 - [VLANs/Trunking/802.1Q] - work in progress
-- [Virtualization](https://github.com/nickbruggen90/Networking-Encyclopedia backside/blob/main/Contents/AdvancedTopics/Virtualization.md)
+- [Virtualization](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/Virtualization.md)
 - [VRF/VRF Lite] - work in progress
 - [VRRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/VRRP-v2-v3.md)
 - [VTP] - work in progress
