@@ -166,6 +166,6 @@
 - [Wireshark/Packet Analysis] - work in progress
 
 ## X
-= [X.509] - work in progress
+- [X.509] - work in progress
 
 ## Z
