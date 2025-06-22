@@ -38,7 +38,7 @@
 - [DHCP Snooping](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DHCP-Snooping.md)
 - [DHCPv6] - work in progress
 - [DTLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DTLS.md)
-- [DTP (Dynamic Trunking Protocol)](#)
+- [DTP (Dynamic Trunking Protocol)] - work in progress
 - [DMVPN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DMVPN.md)
 
 ## E
