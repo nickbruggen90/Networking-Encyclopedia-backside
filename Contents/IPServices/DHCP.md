@@ -270,6 +270,3 @@
 • **Relay agent configuration** must be consistent across all network devices
 
 ---
-
-## Commands
-*[To be completed during lab sessions]*
