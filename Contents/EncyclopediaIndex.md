@@ -91,7 +91,7 @@
 - [MACsec] - work in progress
 - [MPLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/MPLS.md)
 - [MPP] - work in progress
-- [Multicast MAC Reference](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/tree/main/Contents/Layer2)
+- [Multicast MAC Reference](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/Multicast-MAC-reference.md)
 - [MSDP] - work in progress
 - [MSTP/802.1s] - work in progress
 - [MTU/MSS] - work in progress
