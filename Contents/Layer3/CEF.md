@@ -162,11 +162,3 @@ CEF is designed for fast, hardware forwarding, so it does not have explicit "tim
 • **CEF debugging** → Although CEF is hardware-based and typically doesn't produce extensive debug output, some platforms offer debugging commands to track packet forwarding issues. Use these commands with caution in production environments
 
 ---
-
-## Insights
-*[To be completed as learning progresses]*
-
----
-
-## Commands
-*[To be completed during lab sessions]*
