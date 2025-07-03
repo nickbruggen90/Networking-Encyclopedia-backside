@@ -14,7 +14,7 @@
 - [ACL MAC](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/ACL-MAC.md)
 - [Advanced Routing Techniques] - work in progress
 - [Ansible] - work in progress
-- [ARP] - work in progress
+- [ARP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/ARP.md)
 - [Automation](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Automation/Automation.md)
 
 ## B
