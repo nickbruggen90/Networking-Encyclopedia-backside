@@ -56,7 +56,7 @@
 | Type | Description |
 |------|-------------|
 | **Root** | Top level of DNS hierarchy, 13 root server clusters worldwide (A-M), directs queries to appropriate TLD servers |
-| **TLD** | Top-Level Domain servers |
+| **TLD** | Top-Level Domain servers (.com, .net, .ord, etc), manage second level domain registrations, direct queries to authoritative name servers |
 | **Authoritative Name Servers** | Holds the actual DNS records for the domain, runs on Primary/Secondary server model, provide definitive answers for their assigned domains |
 | **Recursive Resolvers** | Often ISP or enterprise-provided (8.8.8.8, 1.1.1.1), handle client queries and handle full resolution, cache results and query other servers on behalf of clients |
 
@@ -75,7 +75,6 @@
 | **TXT** | Text record (SPF, DKIM, etc) |
 | **SOA** | Start of authority, zone metadata |
 | **SRV** | Location of services |
-| **SPF** | Sender policy framework (email security) |
 | **DNSKEY, RRSIG, DS** | DNSSEC-related |
 
 ---
