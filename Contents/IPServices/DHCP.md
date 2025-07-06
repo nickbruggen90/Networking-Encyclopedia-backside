@@ -86,54 +86,34 @@
 
 ---
 
-## DHCP Options
+## Essential DHCP Options (Modern Networks)
 
-### Common Options (1-30)
-
+### Core Network Options
 | Option | Description |
 |--------|-------------|
 | **1** | Subnet mask |
-| **2** | Time offset |
 | **3** | Default gateway (router) |
-| **4** | Time server |
-| **5** | Name server |
 | **6** | DNS server(s) |
-| **7** | Log server |
-| **12** | Client's hostname |
 | **15** | Domain name |
-| **19** | IP forwarding |
-| **23** | Default TTL for IP packet |
-| **26** | Specifies the MTU of the interface |
-| **28** | Broadcast address on the subnet |
+| **51** | IP address lease time |
+| **53** | DHCP message type |
 
-### Critical Options (40-70)
-
+### Common Business Options
 | Option | Description |
 |--------|-------------|
 | **42** | NTP server IPs |
-| **43** | Vendor-specific Information (Cisco WLC, Aruba, etc) |
-| **44** | NetBIOS name server (WINS) |
-| **50** | IP the client requests (used in DHCPREQUEST) |
-| **51** | IP address lease time in seconds |
-| **53** | DHCP message type |
-| **54** | Server identifier |
-| **58** | Renewal (T1) time value |
-| **59** | Rebinding (T2) time value |
-| **60** | Vendor Class Identifier (PXEClient, MSFT 5.0, etc) |
-| **61** | Client identifier |
-| **66** | TFTP server name (commonly used for IP phone or device provisioning) |
-| **67** | Bootfile name (PXE boot or phone configuration) |
+| **43** | Vendor-specific Information (Cisco WLC, Aruba controllers) |
+| **66** | TFTP server name (IP phones, device provisioning) |
+| **67** | Bootfile name (PXE boot, phone configs) |
+| **119** | Domain search list |
+| **121** | Classless static routes |
 
-### Advanced Options (80+)
-
+### Specialized Options
 | Option | Description |
 |--------|-------------|
-| **81** | Client FQDN |
-| **82** | Relay agent information |
-| **119** | Domain search list |
-| **120** | SIP servers |
-| **121** | Classless static routes (RFC 3442) |
-| **150** | TFTP server (Cisco) |
+| **60** | Vendor Class Identifier (PXE, device identification) |
+| **82** | Relay agent information (DHCP snooping) |
+| **150** | TFTP server (Cisco-specific alternative to 66) |
 
 ---
 
