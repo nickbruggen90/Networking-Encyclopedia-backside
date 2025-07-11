@@ -7,6 +7,8 @@
 • **When enabled, DTP can automatically negotiate the port to be trunk or access** based on the remote and local port's DTP mode  
 • **DTP is "plug-and-play"** → Uses TLV format in Ethernet header for automatic trunk negotiation  
 • **Auto mode is the default** on most Cisco switches, making trunk formation automatic when conditions are met
+• **Operates at Layer 2** → Uses Ethernet frames with EtherType 0x2004  
+• **No specific port requirements** → Works by exchanging DTP frames over the physical link
 
 ---
 
@@ -25,13 +27,7 @@
 
 ---
 
-## Protocols/Ports
-• **Operates at Layer 2** → Uses Ethernet frames with EtherType 0x2004  
-• **No specific port requirements** → Works by exchanging DTP frames over the physical link
-
----
-
-## Terminology/Definitions
+## Terminology
 
 | Term | Definition |
 |------|------------|
