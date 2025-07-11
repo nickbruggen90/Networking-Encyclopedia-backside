@@ -61,7 +61,7 @@
 ## H
 - [High Availability Techniques] - work in progress
 - [HSRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/HSRP-v1-v2.md)
-- [HTTP Status Codes] - work in progress
+- [HTTP Status Codes](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/HTTP-status-codes.md)
 
 ## I
 - [iACL] - work in progress
