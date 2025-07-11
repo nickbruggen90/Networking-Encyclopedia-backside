@@ -50,6 +50,15 @@
 
 ---
 
+## AS Numbers
+
+| Type | Range | Description |
+|------|-------|-------------|
+| **2 byte** | 1 - 65535 | Traditional AS number format |
+| **4 byte** | 4.3 billion | Extended AS number format |
+
+--
+
 ## BGP Flavors
 
 ### iBGP (Internal BGP)
