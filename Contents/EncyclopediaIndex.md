@@ -23,22 +23,22 @@
 - [Behind the Desk Insights] - work in progress
 
 ## C
-- [CEF (Cisco Express Forwarding)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/CEF.md)
+- [CEF](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/CEF.md)
 - [Cisco DNA] - work in progress
 - [Cisco Firewalls] - work in progress
 - [Cisco FirePower NGFW] - work in progress
 - [Cisco IBNS] - work in progress
-- [CoPP (Control Plane Policing)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/CoPP.md)
+- [CoPP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/CoPP.md)
 - [CoS/QoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
 
 ## D
 - [Data Models/YANG] - work in progress
-- [DAI (Dynamic ARP Inspection)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DAI.md)
+- [DAI](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DAI.md)
 - [DHCP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/DHCP.md)
 - [DHCP Snooping](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkSecurity/DHCP-Snooping.md)
 - [DHCPv6] - work in progress
 - [DTLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DTLS.md)
-- [DTP (Dynamic Trunking Protocol)](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/DTP.md)
+- [DTP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/DTP.md)
 - [DMVPN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DMVPN.md)
 - [DNS]
 
@@ -116,7 +116,7 @@
 - [Packet Analysis/WireShark] - work in progress
 - [PAgP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/PAgP.md)
 - [PAT](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/PAT.md)
-- [PBR (Policy-Based Routing)] - work in progress
+- [PBR] - work in progress
 - [PIM] - work in progress
 - [PNAC] - work in progress
 - [Port Numbers] - work in progress
@@ -128,7 +128,6 @@
 - [QoS/CoS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/AdvancedTopics/QoS.md)
 
 ## R
-- [Real-World Layer 9] - work in progress
 - [REST API](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/REST-API.md)
 - [RESTCONF/NETCONF](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/NetworkManagement/NETCONF-RESTCONF.md)
 - [Redundancy Protocols](#)
