@@ -120,7 +120,7 @@
 - [PIM] - work in progress
 - [PNAC] - work in progress
 - [Port Numbers] - work in progress
-- [Port Security] - work in progress
+- [Port Security](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/Port-Security.md)
 - [PTP] - work in progress
 - [Python] - work in progress
 
