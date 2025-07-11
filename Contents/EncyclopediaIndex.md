@@ -53,7 +53,7 @@
 
 ## G
 - [GETVPN] - work in progress
-- [GLBP] - work in progress
+- [GLBP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Redundancy/GLBP.md)
 - [GRE / mGRE](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/GRE-mGRE.md)
 - [gRPC] - work in progress
 - [gNMI] - work in progress
