@@ -43,7 +43,7 @@
 - [DNS]
 
 ## E
-- [EIGRP] - work in progress
+- [EIGRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/EIGRP.md)
 - [EtherChannel] - work in progress
 - [Enterprise Network Design] - work in progress
 
