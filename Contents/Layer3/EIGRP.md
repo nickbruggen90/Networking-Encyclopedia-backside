@@ -74,7 +74,7 @@
 
 ---
 
-## Terminology/Definitions
+## Terminology
 
 | Term | Definition |
 |------|------------|
