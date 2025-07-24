@@ -163,9 +163,9 @@
 • Consider TTL impact during migrations or failover planning
 
 ### Monitoring and Maintenance
-• **Monitor for latency, cache hits, anomalies, and availability**  
-• **Perform regular DNS audits and cleanup** to maintain accuracy  
-• **Review DNS logs** for security events and performance issues
+• Monitor for latency, cache hits, anomalies, and availability  
+• Perform regular DNS audits and cleanup to maintain accuracy  
+• Review DNS logs for security events and performance issues
 
 ---
 
