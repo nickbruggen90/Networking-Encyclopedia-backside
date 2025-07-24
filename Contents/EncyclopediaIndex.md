@@ -40,7 +40,7 @@
 - [DTLS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DTLS.md)
 - [DTP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer2/DTP.md)
 - [DMVPN](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/OverlayTechnologies/DMVPN.md)
-- [DNS]
+- [DNS](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/IPServices/DNS.md)
 
 ## E
 - [EIGRP](https://github.com/nickbruggen90/Networking-Encyclopedia-backside/blob/main/Contents/Layer3/EIGRP.md)
